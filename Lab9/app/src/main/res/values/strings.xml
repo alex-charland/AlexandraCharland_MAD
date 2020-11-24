@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Stay</string>
+    <string name="stayDescription">Find the nearest available hotel to stay the night</string>
+    <string name="roomTypeDescription">Choose a room type</string>
+    <string name="single">Single</string>
+    <string name="doubleRoomType">Double</string>
+    <string name="suite">Suite</string>
+    <string name="None">No preference</string>
+    <string name="roomFeatureDescription">Room Features</string>
+    <string name="nonsmoking">Non-Smoking</string>
+    <string name="petsAllowed">Pets Allowed</string>
+    <string name="freeWifi">Free Wifi</string>
+    <string name="priceRangeDesc">Nightly Rate</string>
+    <string name="showImage">Room Preview</string>
+    <string name="switchVal">Show</string>
+    <string name="button">Find Room</string>
+    <string name="seeDetails">See Room Details</string>
+    <string name="bookRoom">Book</string>
+    <string name="favorite">Note</string>
+    <string-array name="prices">
+        <item>Any</item>
+        <item>$30-$100</item>
+        <item>$100+</item>
+    </string-array>
+</resources>
