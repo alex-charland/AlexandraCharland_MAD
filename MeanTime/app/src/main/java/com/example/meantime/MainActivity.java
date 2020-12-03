@@ -151,11 +151,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     }
                     else{
                         Toast.makeText(MainActivity.this,"Task already exists or is empty",Toast.LENGTH_SHORT).show();
+                        chooseTask.setSelection(0);
                     }
                 }
             });
             builder.setNeutralButton("Cancel",(dialog, which) -> {
                 Toast.makeText(MainActivity.this,"Add task cancelled",Toast.LENGTH_SHORT).show();
+                chooseTask.setSelection(0);
             });
             AlertDialog dialog = builder.create();
             dialog.show();
