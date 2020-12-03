@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 TaskInfo task = (TaskInfo) parent.getItemAtPosition(position);
                 boolean b = taskdb.deleteTask(task);
-                Toast.makeText(MainActivity.this,"Task Deleted",Toast.LENGTH_SHORT);
+                Toast.makeText(MainActivity.this,"Task Deleted",Toast.LENGTH_SHORT).show();
                 DisplayTasksInTable(taskdb);
                 fillTheSpinner();
                 return false;
