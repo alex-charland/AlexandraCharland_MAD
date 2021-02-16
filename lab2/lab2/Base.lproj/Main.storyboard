@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hiO-E8-9kH">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Date-->
+        <scene sceneID="MJG-p0-2Wb">
+            <objects>
+                <viewController id="pnx-ds-SCB" customClass="SecondViewController" customModule="lab2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZWc-JM-1VJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="gl8-XM-QQ2">
+                                <rect key="frame" x="47" y="95" width="320" height="355.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwk-Tp-ciR">
+                                        <rect key="frame" x="73" y="0.0" width="174" height="33.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Mks-BN-eTo">
+                                        <rect key="frame" x="0.0" y="61.5" width="320" height="216"/>
+                                        <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                            <!--1970-01-01 11:00:00 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="datePicker:" destination="pnx-ds-SCB" eventType="valueChanged" id="N34-ka-Yur"/>
+                                        </connections>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmd-Dn-ACS">
+                                        <rect key="frame" x="0.0" y="305.5" width="320" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="fiG-pT-elL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pmd-Dn-ACS" firstAttribute="leading" secondItem="Mks-BN-eTo" secondAttribute="leading" id="Zu9-Af-U4O"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XPR-yd-ZRm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gl8-XM-QQ2" firstAttribute="top" secondItem="XPR-yd-ZRm" secondAttribute="top" constant="51" id="2Ip-bl-E6m"/>
+                            <constraint firstItem="gl8-XM-QQ2" firstAttribute="centerX" secondItem="ZWc-JM-1VJ" secondAttribute="centerX" id="cau-YF-LgX"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Date" image="calendar" catalog="system" id="B2m-fh-Z4F"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="pmd-Dn-ACS" id="eOZ-gV-MIh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OCZ-XH-hCK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-400.00000000000006" y="480.80357142857139"/>
+        </scene>
+        <!--Anime-->
+        <scene sceneID="bAa-gp-5I1">
+            <objects>
+                <viewController id="5yD-Ls-px8" customClass="ViewController" customModule="lab2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lK9-gj-lse">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CFc-7e-Oi3">
+                                <rect key="frame" x="47.5" y="126.5" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="5yD-Ls-px8" id="IhI-WU-faX"/>
+                                    <outlet property="delegate" destination="5yD-Ls-px8" id="hmE-9u-LMH"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjB-y0-0Bq">
+                                <rect key="frame" x="83" y="349.5" width="262" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="b5y-j4-Jsp"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Select a genre to get a recommendation here">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search anime by genre" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0f-XR-KoH">
+                                <rect key="frame" x="45" y="74" width="324" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2DP-fM-D57"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="M0f-XR-KoH" firstAttribute="centerX" secondItem="CFc-7e-Oi3" secondAttribute="centerX" id="0sW-qY-HHq"/>
+                            <constraint firstItem="M0f-XR-KoH" firstAttribute="leading" secondItem="2DP-fM-D57" secondAttribute="leading" constant="45" id="LCx-32-9hj"/>
+                            <constraint firstItem="M0f-XR-KoH" firstAttribute="centerX" secondItem="lK9-gj-lse" secondAttribute="centerX" id="Q9p-44-EAb"/>
+                            <constraint firstItem="2DP-fM-D57" firstAttribute="trailing" secondItem="RjB-y0-0Bq" secondAttribute="trailing" constant="69" id="VOV-LP-8c5"/>
+                            <constraint firstItem="CFc-7e-Oi3" firstAttribute="top" secondItem="M0f-XR-KoH" secondAttribute="bottom" constant="18.5" id="h7R-aw-AJQ"/>
+                            <constraint firstItem="CFc-7e-Oi3" firstAttribute="leading" secondItem="2DP-fM-D57" secondAttribute="leading" constant="47.5" id="iY4-GT-lsv"/>
+                            <constraint firstItem="M0f-XR-KoH" firstAttribute="top" secondItem="2DP-fM-D57" secondAttribute="top" constant="30" id="ogD-SI-cJE"/>
+                            <constraint firstItem="RjB-y0-0Bq" firstAttribute="leading" secondItem="2DP-fM-D57" secondAttribute="leading" constant="83" id="rSO-5b-uaE"/>
+                            <constraint firstItem="RjB-y0-0Bq" firstAttribute="top" secondItem="CFc-7e-Oi3" secondAttribute="bottom" constant="7.5" id="yqe-sj-B3m"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Anime" image="star.fill" catalog="system" id="33j-sL-OYw"/>
+                    <connections>
+                        <outlet property="animeLabel" destination="RjB-y0-0Bq" id="cen-RO-GaU"/>
+                        <outlet property="animePicker" destination="CFc-7e-Oi3" id="yvL-HN-U3d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g0H-Fs-Bhp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-400.00000000000006" y="-179.46428571428569"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cHM-CD-iS2">
+            <objects>
+                <tabBarController id="hiO-E8-9kH" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ovV-Hi-fj6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="5yD-Ls-px8" kind="relationship" relationship="viewControllers" id="VIc-B0-wHS"/>
+                        <segue destination="pnx-ds-SCB" kind="relationship" relationship="viewControllers" id="Esd-z8-nW4"/>
+                        <segue destination="csM-CD-Ic1" kind="relationship" relationship="viewControllers" id="wrX-Rq-aVR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m5d-ez-0A2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1255" y="119"/>
+        </scene>
+        <!--Online-->
+        <scene sceneID="iP8-Hw-gg1">
+            <objects>
+                <viewController id="csM-CD-Ic1" customClass="ThirdViewController" customModule="lab2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="njE-de-OQm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mal" translatesAutoresizingMaskIntoConstraints="NO" id="5Yq-4P-gRv">
+                                <rect key="frame" x="81" y="117" width="253" height="191"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgg-Zy-e85">
+                                <rect key="frame" x="128" y="341" width="159" height="30"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="View more anime">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="animeButton:" destination="csM-CD-Ic1" eventType="touchUpInside" id="seS-a5-lSU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dxo-vP-W7A"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dxo-vP-W7A" firstAttribute="trailing" secondItem="fgg-Zy-e85" secondAttribute="trailing" constant="127" id="DcA-Ak-3zm"/>
+                            <constraint firstItem="dxo-vP-W7A" firstAttribute="trailing" secondItem="5Yq-4P-gRv" secondAttribute="trailing" constant="80" id="GAa-2g-SBd"/>
+                            <constraint firstItem="fgg-Zy-e85" firstAttribute="top" secondItem="dxo-vP-W7A" secondAttribute="top" constant="297" id="V7r-ui-Tiv"/>
+                            <constraint firstItem="5Yq-4P-gRv" firstAttribute="top" secondItem="dxo-vP-W7A" secondAttribute="top" constant="73" id="a0K-MJ-P7N"/>
+                            <constraint firstItem="5Yq-4P-gRv" firstAttribute="leading" secondItem="dxo-vP-W7A" secondAttribute="leading" constant="81" id="hMU-Yk-cy9"/>
+                            <constraint firstItem="fgg-Zy-e85" firstAttribute="leading" secondItem="dxo-vP-W7A" secondAttribute="leading" constant="128" id="y1A-kZ-txa"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Online" image="hand.point.up.fill" catalog="system" id="SPo-ue-1ow"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SSP-Hf-Ekm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="321.73913043478262" y="98.4375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="hand.point.up.fill" catalog="system" width="111" height="128"/>
+        <image name="mal" width="610" height="191"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
