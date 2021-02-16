@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA255C2525DB7AA000269153 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA255C2425DB7AA000269153 /* SearchViewController.swift */; };
+		DA7FE6B425DBA16600948BCD /* animelist.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA7FE6B325DBA16500948BCD /* animelist.plist */; };
 		DAB8F1AC25D9F29500C4E8B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB8F1AB25D9F29500C4E8B5 /* AppDelegate.swift */; };
 		DAB8F1AE25D9F29500C4E8B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB8F1AD25D9F29500C4E8B5 /* SceneDelegate.swift */; };
 		DAB8F1B025D9F29500C4E8B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB8F1AF25D9F29500C4E8B5 /* ViewController.swift */; };
@@ -15,7 +16,6 @@
 		DAB8F1B525D9F29600C4E8B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB8F1B425D9F29600C4E8B5 /* Assets.xcassets */; };
 		DAB8F1B825D9F29600C4E8B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB8F1B625D9F29600C4E8B5 /* LaunchScreen.storyboard */; };
 		DAB8F1C125D9F43600C4E8B5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB8F1C025D9F43600C4E8B5 /* TableViewController.swift */; };
-		DAB8F1C425D9F64900C4E8B5 /* animelist.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB8F1C325D9F64900C4E8B5 /* animelist.plist */; };
 		DAB8F1C725D9F7E100C4E8B5 /* animeDataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB8F1C625D9F7E100C4E8B5 /* animeDataStruct.swift */; };
 		DAB8F1CA25D9F8FD00C4E8B5 /* animeDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB8F1C925D9F8FD00C4E8B5 /* animeDataLoader.swift */; };
 		DAB8F1CD25DA138100C4E8B5 /* TitleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB8F1CC25DA138100C4E8B5 /* TitleTableViewController.swift */; };
@@ -24,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		DA255C2425DB7AA000269153 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DA7FE6B325DBA16500948BCD /* animelist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = animelist.plist; sourceTree = "<group>"; };
 		DAB8F1A825D9F29500C4E8B5 /* AnimeList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB8F1AB25D9F29500C4E8B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAB8F1AD25D9F29500C4E8B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		DAB8F1B725D9F29600C4E8B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAB8F1B925D9F29600C4E8B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAB8F1C025D9F43600C4E8B5 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		DAB8F1C325D9F64900C4E8B5 /* animelist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = animelist.plist; path = ../../../GitHub/AlexandraCharland_MAD/lab2/lab2/animelist.plist; sourceTree = "<group>"; };
 		DAB8F1C625D9F7E100C4E8B5 /* animeDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animeDataStruct.swift; sourceTree = "<group>"; };
 		DAB8F1C925D9F8FD00C4E8B5 /* animeDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animeDataLoader.swift; sourceTree = "<group>"; };
 		DAB8F1CC25DA138100C4E8B5 /* TitleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewController.swift; sourceTree = "<group>"; };
@@ -78,10 +78,10 @@
 				DAB8F1CC25DA138100C4E8B5 /* TitleTableViewController.swift */,
 				DA255C2425DB7AA000269153 /* SearchViewController.swift */,
 				DAB8F1C025D9F43600C4E8B5 /* TableViewController.swift */,
+				DA7FE6B325DBA16500948BCD /* animelist.plist */,
 				DAB8F1B425D9F29600C4E8B5 /* Assets.xcassets */,
 				DAB8F1B625D9F29600C4E8B5 /* LaunchScreen.storyboard */,
 				DAB8F1B925D9F29600C4E8B5 /* Info.plist */,
-				DAB8F1C325D9F64900C4E8B5 /* animelist.plist */,
 				DAB8F1C625D9F7E100C4E8B5 /* animeDataStruct.swift */,
 				DAB8F1C925D9F8FD00C4E8B5 /* animeDataLoader.swift */,
 			);
@@ -148,7 +148,7 @@
 				DAB8F1B825D9F29600C4E8B5 /* LaunchScreen.storyboard in Resources */,
 				DAB8F1B525D9F29600C4E8B5 /* Assets.xcassets in Resources */,
 				DAB8F1B325D9F29500C4E8B5 /* Main.storyboard in Resources */,
-				DAB8F1C425D9F64900C4E8B5 /* animelist.plist in Resources */,
+				DA7FE6B425DBA16600948BCD /* animelist.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
