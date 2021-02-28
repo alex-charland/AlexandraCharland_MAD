@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA5E9A8125EC2F2D00E5307D /* animeDetail.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA5E9A8025EC2F2D00E5307D /* animeDetail.plist */; };
+		DA5E9A8425EC430400E5307D /* SecondaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E9A8325EC430400E5307D /* SecondaryViewController.swift */; };
+		DADB945425EB2CCA009CE663 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB945325EB2CCA009CE663 /* AppDelegate.swift */; };
+		DADB945625EB2CCA009CE663 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB945525EB2CCA009CE663 /* SceneDelegate.swift */; };
+		DADB945825EB2CCA009CE663 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB945725EB2CCA009CE663 /* ViewController.swift */; };
+		DADB945B25EB2CCA009CE663 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DADB945925EB2CCA009CE663 /* Main.storyboard */; };
+		DADB945D25EB2CCC009CE663 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DADB945C25EB2CCC009CE663 /* Assets.xcassets */; };
+		DADB946025EB2CCC009CE663 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DADB945E25EB2CCC009CE663 /* LaunchScreen.storyboard */; };
+		DADB946925EB58B8009CE663 /* PrimaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB946825EB58B8009CE663 /* PrimaryTableViewController.swift */; };
+		DADB946C25EB592C009CE663 /* animeDataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB946B25EB592C009CE663 /* animeDataFile.swift */; };
+		DADB946F25EB5989009CE663 /* animeDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB946E25EB5989009CE663 /* animeDataLoader.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DA5E9A8025EC2F2D00E5307D /* animeDetail.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = animeDetail.plist; sourceTree = "<group>"; };
+		DA5E9A8325EC430400E5307D /* SecondaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryViewController.swift; sourceTree = "<group>"; };
+		DADB945025EB2CCA009CE663 /* AniDetail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AniDetail.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DADB945325EB2CCA009CE663 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DADB945525EB2CCA009CE663 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DADB945725EB2CCA009CE663 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DADB945A25EB2CCA009CE663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DADB945C25EB2CCC009CE663 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DADB945F25EB2CCC009CE663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DADB946125EB2CCC009CE663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DADB946825EB58B8009CE663 /* PrimaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTableViewController.swift; sourceTree = "<group>"; };
+		DADB946B25EB592C009CE663 /* animeDataFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animeDataFile.swift; sourceTree = "<group>"; };
+		DADB946E25EB5989009CE663 /* animeDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animeDataLoader.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DADB944D25EB2CCA009CE663 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DADB944725EB2CCA009CE663 = {
+			isa = PBXGroup;
+			children = (
+				DADB945225EB2CCA009CE663 /* AniDetail */,
+				DADB945125EB2CCA009CE663 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DADB945125EB2CCA009CE663 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DADB945025EB2CCA009CE663 /* AniDetail.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DADB945225EB2CCA009CE663 /* AniDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DADB945325EB2CCA009CE663 /* AppDelegate.swift */,
+				DADB945525EB2CCA009CE663 /* SceneDelegate.swift */,
+				DADB945725EB2CCA009CE663 /* ViewController.swift */,
+				DADB945925EB2CCA009CE663 /* Main.storyboard */,
+				DA5E9A8025EC2F2D00E5307D /* animeDetail.plist */,
+				DADB946825EB58B8009CE663 /* PrimaryTableViewController.swift */,
+				DA5E9A8325EC430400E5307D /* SecondaryViewController.swift */,
+				DADB946B25EB592C009CE663 /* animeDataFile.swift */,
+				DADB946E25EB5989009CE663 /* animeDataLoader.swift */,
+				DADB945C25EB2CCC009CE663 /* Assets.xcassets */,
+				DADB945E25EB2CCC009CE663 /* LaunchScreen.storyboard */,
+				DADB946125EB2CCC009CE663 /* Info.plist */,
+			);
+			path = AniDetail;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DADB944F25EB2CCA009CE663 /* AniDetail */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DADB946425EB2CCC009CE663 /* Build configuration list for PBXNativeTarget "AniDetail" */;
+			buildPhases = (
+				DADB944C25EB2CCA009CE663 /* Sources */,
+				DADB944D25EB2CCA009CE663 /* Frameworks */,
+				DADB944E25EB2CCA009CE663 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AniDetail;
+			productName = AniDetail;
+			productReference = DADB945025EB2CCA009CE663 /* AniDetail.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DADB944825EB2CCA009CE663 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					DADB944F25EB2CCA009CE663 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = DADB944B25EB2CCA009CE663 /* Build configuration list for PBXProject "AniDetail" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DADB944725EB2CCA009CE663;
+			productRefGroup = DADB945125EB2CCA009CE663 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DADB944F25EB2CCA009CE663 /* AniDetail */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DADB944E25EB2CCA009CE663 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA5E9A8125EC2F2D00E5307D /* animeDetail.plist in Resources */,
+				DADB946025EB2CCC009CE663 /* LaunchScreen.storyboard in Resources */,
+				DADB945D25EB2CCC009CE663 /* Assets.xcassets in Resources */,
+				DADB945B25EB2CCA009CE663 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DADB944C25EB2CCA009CE663 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DADB946925EB58B8009CE663 /* PrimaryTableViewController.swift in Sources */,
+				DADB946C25EB592C009CE663 /* animeDataFile.swift in Sources */,
+				DADB945825EB2CCA009CE663 /* ViewController.swift in Sources */,
+				DADB946F25EB5989009CE663 /* animeDataLoader.swift in Sources */,
+				DADB945425EB2CCA009CE663 /* AppDelegate.swift in Sources */,
+				DA5E9A8425EC430400E5307D /* SecondaryViewController.swift in Sources */,
+				DADB945625EB2CCA009CE663 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DADB945925EB2CCA009CE663 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DADB945A25EB2CCA009CE663 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DADB945E25EB2CCC009CE663 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DADB945F25EB2CCC009CE663 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DADB946225EB2CCC009CE663 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DADB946325EB2CCC009CE663 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DADB946525EB2CCC009CE663 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2SRKT29TLH;
+				INFOPLIST_FILE = AniDetail/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ATLS4320.AniDetail;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DADB946625EB2CCC009CE663 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2SRKT29TLH;
+				INFOPLIST_FILE = AniDetail/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ATLS4320.AniDetail;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DADB944B25EB2CCA009CE663 /* Build configuration list for PBXProject "AniDetail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DADB946225EB2CCC009CE663 /* Debug */,
+				DADB946325EB2CCC009CE663 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DADB946425EB2CCC009CE663 /* Build configuration list for PBXNativeTarget "AniDetail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DADB946525EB2CCC009CE663 /* Debug */,
+				DADB946625EB2CCC009CE663 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DADB944825EB2CCA009CE663 /* Project object */;
+}

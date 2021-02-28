@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sbQ-2g-mqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Secondary View Controller-->
+        <scene sceneID="5it-C4-MFA">
+            <objects>
+                <viewController id="9oS-iU-H7a" customClass="SecondaryViewController" customModule="AniDetail" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ee6-C2-gqR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3W-HC-qHD">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="cVf-CJ-ou7">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t8k-Yz-g40"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cVf-CJ-ou7" firstAttribute="centerY" secondItem="ee6-C2-gqR" secondAttribute="centerY" id="1nQ-94-IkP"/>
+                            <constraint firstItem="l3W-HC-qHD" firstAttribute="top" secondItem="t8k-Yz-g40" secondAttribute="top" id="Abx-q5-b1K"/>
+                            <constraint firstItem="t8k-Yz-g40" firstAttribute="bottom" secondItem="l3W-HC-qHD" secondAttribute="bottom" id="C3k-Cc-pkt"/>
+                            <constraint firstItem="cVf-CJ-ou7" firstAttribute="centerX" secondItem="ee6-C2-gqR" secondAttribute="centerX" id="Oxk-Lo-wXf"/>
+                            <constraint firstItem="t8k-Yz-g40" firstAttribute="trailing" secondItem="l3W-HC-qHD" secondAttribute="trailing" id="bJw-2v-5iH"/>
+                            <constraint firstItem="l3W-HC-qHD" firstAttribute="leading" secondItem="t8k-Yz-g40" secondAttribute="leading" id="eIv-Us-fb5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="82p-XI-QqO"/>
+                    <connections>
+                        <outlet property="webSpinner" destination="cVf-CJ-ou7" id="Vcs-va-IkZ"/>
+                        <outlet property="webView" destination="l3W-HC-qHD" id="TP2-3C-To6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BPZ-bL-37e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="227.536231884058" y="563.83928571428567"/>
+        </scene>
+        <!--Anime-->
+        <scene sceneID="LSh-WE-XNW">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="cHj-zt-pW7" customClass="PrimaryTableViewController" customModule="AniDetail" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IlK-4h-y6C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="titleCell" id="foo-vB-ncL">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="foo-vB-ncL" id="dDk-1G-5HC">
+                                    <rect key="frame" x="0.0" y="0.0" width="351" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="7Fe-96-NTv" kind="showDetail" identifier="websegue" id="M22-dd-4eh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cHj-zt-pW7" id="L7x-N8-lV5"/>
+                            <outlet property="delegate" destination="cHj-zt-pW7" id="phJ-yD-YzJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Anime" id="2Wu-tW-TKp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="07p-8U-o6E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189" y="-162"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LkP-ip-an3">
+            <objects>
+                <navigationController id="OZM-lx-vi9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kng-wP-eiV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cHj-zt-pW7" kind="relationship" relationship="rootViewController" id="TkS-b4-LGP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sj8-ji-zfS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-698" y="-162"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="8x1-Kg-NWI">
+            <objects>
+                <splitViewController allowDoubleColumnStyle="YES" id="sbQ-2g-mqX" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="OZM-lx-vi9" kind="relationship" relationship="masterViewController" id="Ny4-i7-HU0"/>
+                        <segue destination="7Fe-96-NTv" kind="relationship" relationship="detailViewController" id="2pQ-xK-j0V"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NPp-hd-qqH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1589" y="141"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8y8-ek-4mJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Fe-96-NTv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MGb-h8-KdI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9oS-iU-H7a" kind="relationship" relationship="rootViewController" id="17b-jl-fdN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PCt-5a-t0Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-699" y="564"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="M22-dd-4eh"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
