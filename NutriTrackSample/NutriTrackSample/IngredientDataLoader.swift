@@ -36,9 +36,13 @@ class IngredientDataLoader{
         return ingredientData[index].ingredients
     }
     
-//    func addIngredient(index:Int, newIngredient:String, newIndex: Int){
-//        ingredientData[index].ingredients.insert(newIngredient, at: newIndex)
-//    }
+    func addIngredient(categ:Int, newIngredient:Ingredient, newIndex:Int){
+        ingredientData[categ].ingredients.insert(newIngredient, at: newIndex)
+        print("New ingredient added")
+        for i in ingredientData[categ].ingredients{
+            print(i)
+        }
+    }
 //
 //    func deleteIngredient(index:Int, currIndex: Int){
 //        ingredientData[index].ingredients.remove(at: currIndex)

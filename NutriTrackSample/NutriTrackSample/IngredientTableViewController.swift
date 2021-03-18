@@ -16,6 +16,7 @@ class IngredientTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         ingredientList = ingredientData.getIngredients(index: selectedCategory)
+        ingredientNames = [String]()
         for ingredient in ingredientList{
             ingredientNames.append(ingredient.name)
         }
@@ -40,7 +41,7 @@ class IngredientTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return ingredientList.count
+        return ingredientNames.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,6 +61,25 @@ class IngredientTableViewController: UITableViewController {
                     nutritionVC.ingredientData = ingredientData
                     nutritionVC.selectedIngredient = indexPath.row
                     nutritionVC.ingredientItem = ingredientList
+                }
+            }
+        }
+    }
+    
+    @IBAction func unwindSegue (_ segue:UIStoryboardSegue){
+        if segue.identifier=="doneSegue"{
+            if let source = segue.source as? AddIngredientViewController {
+                //only add a country if there is text in the textfield
+                if source.newIngredient.isEmpty == false{
+                    //add country to our data model instance
+                    let newIng = Ingredient(newName: source.newIngredient)
+                    ingredientData.addIngredient(categ: selectedCategory, newIngredient: newIng, newIndex: ingredientList.count)
+//                    continentsData.addCountry(index: selectedContinent, newCountry: source.addedCountry, newIndex: countryList.count)
+                    //add country to the array
+//                    countryList.append(source.addedCountry)
+                    ingredientNames.append(source.newIngredient)
+                    ingredientList = ingredientData.getIngredients(index: selectedCategory)
+                    tableView.reloadData()
                 }
             }
         }

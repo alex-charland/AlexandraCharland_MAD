@@ -13,6 +13,27 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
     var ingredientList = [String]()
     
     @IBOutlet weak var ingredientTable: UITableView!
+    @IBOutlet weak var newIngredientField: UITextField!
+    
+    @IBAction func openIngredientAlert(_ sender: UITextField) {
+        let addalert = UIAlertController(title: "New Item", message: "Add a new item to your grocery list", preferredStyle: .alert)
+        //add textfield to the alert
+        addalert.addTextField(configurationHandler: {(UITextField) in
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        addalert.addAction(cancelAction)
+        let addItemAction = UIAlertAction(title: "Add", style: .default, handler: {(UIAlertAction)in
+            // adds new item
+//            let newitem = addalert.textFields![0] //gets textfield
+//            let newGroceryItem = newitem.text! //gets textfield text
+//            self.groceries.append(newGroceryItem) //adds textfield text to array
+//            self.tableView.reloadData()
+//            self.groceryData.addItem(newItem: newGroceryItem) // add to data handler
+        })
+        addalert.addAction(addItemAction)
+        present(addalert, animated: true, completion: nil)
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         ingredientList.count
