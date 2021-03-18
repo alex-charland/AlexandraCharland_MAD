@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>category</key>
+		<string>Dairy &amp; Eggs</string>
+		<key>ingredients</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Challenge Butter, Salted</string>
+				<key>nutrition</key>
+				<dict>
+					<key>serving_size</key>
+					<string>1</string>
+					<key>calories</key>
+					<string>120</string>
+					<key>total_fat</key>
+					<string>9.0 g</string>
+					<key>saturated_fat</key>
+					<string>4.5 g</string>
+					<key>trans_fat</key>
+					<string>0.9 g</string>
+					<key>cholesterol</key>
+					<string>7.8 mg</string>
+					<key>sodium</key>
+					<string>163.9 mg</string>
+					<key>total_carbohydrates</key>
+					<string>23 g</string>
+					<key>dietary_fiber</key>
+					<string>0.4 g</string>
+					<key>sugar</key>
+					<string>14.8 g</string>
+					<key>protein</key>
+					<string>2 g</string>
+					<key>vitamin_a</key>
+					<string>2%</string>
+					<key>calcium</key>
+					<string>0%</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Horizon Organic Heavy Whipping Cream</string>
+				<key>nutrition</key>
+				<dict>
+					<key>serving_size</key>
+					<string>1</string>
+					<key>calories</key>
+					<string>120</string>
+					<key>total_fat</key>
+					<string>9.0 g</string>
+					<key>saturated_fat</key>
+					<string>4.5 g</string>
+					<key>trans_fat</key>
+					<string>0.9 g</string>
+					<key>cholesterol</key>
+					<string>7.8 mg</string>
+					<key>sodium</key>
+					<string>163.9 mg</string>
+					<key>total_carbohydrates</key>
+					<string>23 g</string>
+					<key>dietary_fiber</key>
+					<string>0.4 g</string>
+					<key>sugar</key>
+					<string>14.8 g</string>
+					<key>protein</key>
+					<string>2 g</string>
+					<key>vitamin_a</key>
+					<string>2%</string>
+					<key>calcium</key>
+					<string>0%</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Kirkland Signature Grade A Organic Large Eggs</string>
+				<key>nutrition</key>
+				<dict>
+					<key>serving_size</key>
+					<string>1</string>
+					<key>calories</key>
+					<string>120</string>
+					<key>total_fat</key>
+					<string>9.0 g</string>
+					<key>saturated_fat</key>
+					<string>4.5 g</string>
+					<key>trans_fat</key>
+					<string>0.9 g</string>
+					<key>cholesterol</key>
+					<string>7.8 mg</string>
+					<key>sodium</key>
+					<string>163.9 mg</string>
+					<key>total_carbohydrates</key>
+					<string>23 g</string>
+					<key>dietary_fiber</key>
+					<string>0.4 g</string>
+					<key>sugar</key>
+					<string>14.8 g</string>
+					<key>protein</key>
+					<string>2 g</string>
+					<key>vitamin_a</key>
+					<string>2%</string>
+					<key>calcium</key>
+					<string>0%</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Kirkland Signature Grade A Organic Medium Eggs</string>
+				<key>nutrition</key>
+				<dict>
+					<key>serving_size</key>
+					<string>1</string>
+					<key>calories</key>
+					<string>120</string>
+					<key>total_fat</key>
+					<string>9.0 g</string>
+					<key>saturated_fat</key>
+					<string>4.5 g</string>
+					<key>trans_fat</key>
+					<string>0.9 g</string>
+					<key>cholesterol</key>
+					<string>7.8 mg</string>
+					<key>sodium</key>
+					<string>163.9 mg</string>
+					<key>total_carbohydrates</key>
+					<string>23 g</string>
+					<key>dietary_fiber</key>
+					<string>0.4 g</string>
+					<key>sugar</key>
+					<string>14.8 g</string>
+					<key>protein</key>
+					<string>2 g</string>
+					<key>vitamin_a</key>
+					<string>2%</string>
+					<key>calcium</key>
+					<string>0%</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Horizon Organic 2% Reduced Fat Milk</string>
+				<key>nutrition</key>
+				<dict>
+					<key>serving_size</key>
+					<string>1</string>
+					<key>calories</key>
+					<string>120</string>
+					<key>total_fat</key>
+					<string>9.0 g</string>
+					<key>saturated_fat</key>
+					<string>4.5 g</string>
+					<key>trans_fat</key>
+					<string>0.9 g</string>
+					<key>cholesterol</key>
+					<string>7.8 mg</string>
+					<key>sodium</key>
+					<string>163.9 mg</string>
+					<key>total_carbohydrates</key>
+					<string>23 g</string>
+					<key>dietary_fiber</key>
+					<string>0.4 g</string>
+					<key>sugar</key>
+					<string>14.8 g</string>
+					<key>protein</key>
+					<string>2 g</string>
+					<key>vitamin_a</key>
+					<string>2%</string>
+					<key>calcium</key>
+					<string>0%</string>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

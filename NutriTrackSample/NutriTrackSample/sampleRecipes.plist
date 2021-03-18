@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>recipe</key>
+		<string>Chocolate Chip Cookies</string>
+		<key>ingredients</key>
+		<array>
+			<string>1 Cup Challenge Butter, Salted</string>
+			<string>1 Cup C&amp;H Pure White Cane Sugar</string>
+			<string>1 Cup C&amp;H Light Brown Sugar</string>
+			<string>2 Teaspoon McCormick Pure Vanilla Extract</string>
+			<string>2 Quantity Kirkland Signature Grade A Organic Large Eggs</string>
+			<string>3 Cup King Arthur Whole Wheat Flour</string>
+			<string>1 Teaspoon Arm &amp; Hammer Baking Soda</string>
+			<string>1/2 Teaspoon Baking Powder</string>
+			<string>1 Teaspoon Salt</string>
+			<string>2 Cup Kirkland Signature Semi-Sweet Chocolate Chips</string>
+		</array>
+		<key>nutrition</key>
+		<dict>
+			<key>serving_size</key>
+			<string>1</string>
+			<key>calories</key>
+			<string>120</string>
+			<key>total_fat</key>
+			<string>9.0 g</string>
+			<key>saturated_fat</key>
+			<string>4.5 g</string>
+			<key>trans_fat</key>
+			<string>0.9 g</string>
+			<key>cholesterol</key>
+			<string>7.8 mg</string>
+			<key>sodium</key>
+			<string>163.9 mg</string>
+			<key>total_carbohydrates</key>
+			<string>23 g</string>
+			<key>dietary_fiber</key>
+			<string>0.4 g</string>
+			<key>sugar</key>
+			<string>14.8 g</string>
+			<key>protein</key>
+			<string>2 g</string>
+			<key>vitamin_a</key>
+			<string>2%</string>
+			<key>calcium</key>
+			<string>0%</string>
+		</dict>
+	</dict>
+</array>
+</plist>

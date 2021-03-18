@@ -1,0 +1,386 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA9981BA2602B6860018EAD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9981B92602B6860018EAD6 /* AppDelegate.swift */; };
+		DA9981BC2602B6860018EAD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9981BB2602B6860018EAD6 /* SceneDelegate.swift */; };
+		DA9981C12602B6860018EAD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA9981BF2602B6860018EAD6 /* Main.storyboard */; };
+		DA9981C32602B6880018EAD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9981C22602B6880018EAD6 /* Assets.xcassets */; };
+		DA9981C62602B6880018EAD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA9981C42602B6880018EAD6 /* LaunchScreen.storyboard */; };
+		DA9981D02602BA070018EAD6 /* GroceryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9981CF2602BA070018EAD6 /* GroceryTableViewController.swift */; };
+		DA9981D32602BA4D0018EAD6 /* sampleIngredients.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA9981D22602BA4D0018EAD6 /* sampleIngredients.plist */; };
+		DA9981D62602BA610018EAD6 /* NutritionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9981D52602BA610018EAD6 /* NutritionInfo.swift */; };
+		DA9981DD2602BAF20018EAD6 /* IngredientDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9981DC2602BAF20018EAD6 /* IngredientDataLoader.swift */; };
+		DA9981E02602BBBB0018EAD6 /* IngredientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9981DF2602BBBB0018EAD6 /* IngredientTableViewController.swift */; };
+		DA9981E32602C0940018EAD6 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9981E22602C0940018EAD6 /* RecipeTableViewController.swift */; };
+		DA9981E62602C1900018EAD6 /* IngNutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9981E52602C1900018EAD6 /* IngNutTableViewController.swift */; };
+		DA9981E92602C1B70018EAD6 /* RecipNutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9981E82602C1B70018EAD6 /* RecipNutTableViewController.swift */; };
+		DA9981EC2602C3620018EAD6 /* RecipeDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9981EB2602C3620018EAD6 /* RecipeDataLoader.swift */; };
+		DA9981EF2602C3B30018EAD6 /* sampleRecipes.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA9981EE2602C3B30018EAD6 /* sampleRecipes.plist */; };
+		DA9981F22602C5700018EAD6 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9981F12602C5700018EAD6 /* RecipeViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DA9981B62602B6860018EAD6 /* NutriTrackSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriTrackSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA9981B92602B6860018EAD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DA9981BB2602B6860018EAD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DA9981C02602B6860018EAD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DA9981C22602B6880018EAD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA9981C52602B6880018EAD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DA9981C72602B6880018EAD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA9981CF2602BA070018EAD6 /* GroceryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryTableViewController.swift; sourceTree = "<group>"; };
+		DA9981D22602BA4D0018EAD6 /* sampleIngredients.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sampleIngredients.plist; sourceTree = "<group>"; };
+		DA9981D52602BA610018EAD6 /* NutritionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionInfo.swift; sourceTree = "<group>"; };
+		DA9981DC2602BAF20018EAD6 /* IngredientDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDataLoader.swift; sourceTree = "<group>"; };
+		DA9981DF2602BBBB0018EAD6 /* IngredientTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewController.swift; sourceTree = "<group>"; };
+		DA9981E22602C0940018EAD6 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
+		DA9981E52602C1900018EAD6 /* IngNutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngNutTableViewController.swift; sourceTree = "<group>"; };
+		DA9981E82602C1B70018EAD6 /* RecipNutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipNutTableViewController.swift; sourceTree = "<group>"; };
+		DA9981EB2602C3620018EAD6 /* RecipeDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDataLoader.swift; sourceTree = "<group>"; };
+		DA9981EE2602C3B30018EAD6 /* sampleRecipes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sampleRecipes.plist; sourceTree = "<group>"; };
+		DA9981F12602C5700018EAD6 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA9981B32602B6860018EAD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA9981AD2602B6860018EAD6 = {
+			isa = PBXGroup;
+			children = (
+				DA9981B82602B6860018EAD6 /* NutriTrackSample */,
+				DA9981B72602B6860018EAD6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA9981B72602B6860018EAD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA9981B62602B6860018EAD6 /* NutriTrackSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA9981B82602B6860018EAD6 /* NutriTrackSample */ = {
+			isa = PBXGroup;
+			children = (
+				DA9981B92602B6860018EAD6 /* AppDelegate.swift */,
+				DA9981BB2602B6860018EAD6 /* SceneDelegate.swift */,
+				DA9981BF2602B6860018EAD6 /* Main.storyboard */,
+				DA9981F12602C5700018EAD6 /* RecipeViewController.swift */,
+				DA9981E82602C1B70018EAD6 /* RecipNutTableViewController.swift */,
+				DA9981E52602C1900018EAD6 /* IngNutTableViewController.swift */,
+				DA9981E22602C0940018EAD6 /* RecipeTableViewController.swift */,
+				DA9981DF2602BBBB0018EAD6 /* IngredientTableViewController.swift */,
+				DA9981EB2602C3620018EAD6 /* RecipeDataLoader.swift */,
+				DA9981CF2602BA070018EAD6 /* GroceryTableViewController.swift */,
+				DA9981DC2602BAF20018EAD6 /* IngredientDataLoader.swift */,
+				DA9981D52602BA610018EAD6 /* NutritionInfo.swift */,
+				DA9981C22602B6880018EAD6 /* Assets.xcassets */,
+				DA9981C42602B6880018EAD6 /* LaunchScreen.storyboard */,
+				DA9981C72602B6880018EAD6 /* Info.plist */,
+				DA9981D22602BA4D0018EAD6 /* sampleIngredients.plist */,
+				DA9981EE2602C3B30018EAD6 /* sampleRecipes.plist */,
+			);
+			path = NutriTrackSample;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA9981B52602B6860018EAD6 /* NutriTrackSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA9981CA2602B6880018EAD6 /* Build configuration list for PBXNativeTarget "NutriTrackSample" */;
+			buildPhases = (
+				DA9981B22602B6860018EAD6 /* Sources */,
+				DA9981B32602B6860018EAD6 /* Frameworks */,
+				DA9981B42602B6860018EAD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NutriTrackSample;
+			productName = NutriTrackSample;
+			productReference = DA9981B62602B6860018EAD6 /* NutriTrackSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA9981AE2602B6860018EAD6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					DA9981B52602B6860018EAD6 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = DA9981B12602B6860018EAD6 /* Build configuration list for PBXProject "NutriTrackSample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA9981AD2602B6860018EAD6;
+			productRefGroup = DA9981B72602B6860018EAD6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA9981B52602B6860018EAD6 /* NutriTrackSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA9981B42602B6860018EAD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA9981C62602B6880018EAD6 /* LaunchScreen.storyboard in Resources */,
+				DA9981C32602B6880018EAD6 /* Assets.xcassets in Resources */,
+				DA9981C12602B6860018EAD6 /* Main.storyboard in Resources */,
+				DA9981D32602BA4D0018EAD6 /* sampleIngredients.plist in Resources */,
+				DA9981EF2602C3B30018EAD6 /* sampleRecipes.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA9981B22602B6860018EAD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA9981E92602C1B70018EAD6 /* RecipNutTableViewController.swift in Sources */,
+				DA9981BA2602B6860018EAD6 /* AppDelegate.swift in Sources */,
+				DA9981D02602BA070018EAD6 /* GroceryTableViewController.swift in Sources */,
+				DA9981DD2602BAF20018EAD6 /* IngredientDataLoader.swift in Sources */,
+				DA9981D62602BA610018EAD6 /* NutritionInfo.swift in Sources */,
+				DA9981F22602C5700018EAD6 /* RecipeViewController.swift in Sources */,
+				DA9981E32602C0940018EAD6 /* RecipeTableViewController.swift in Sources */,
+				DA9981EC2602C3620018EAD6 /* RecipeDataLoader.swift in Sources */,
+				DA9981E02602BBBB0018EAD6 /* IngredientTableViewController.swift in Sources */,
+				DA9981E62602C1900018EAD6 /* IngNutTableViewController.swift in Sources */,
+				DA9981BC2602B6860018EAD6 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DA9981BF2602B6860018EAD6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA9981C02602B6860018EAD6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DA9981C42602B6880018EAD6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA9981C52602B6880018EAD6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA9981C82602B6880018EAD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DA9981C92602B6880018EAD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA9981CB2602B6880018EAD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2SRKT29TLH;
+				INFOPLIST_FILE = NutriTrackSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ATLS4320.NutriTrackSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA9981CC2602B6880018EAD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2SRKT29TLH;
+				INFOPLIST_FILE = NutriTrackSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ATLS4320.NutriTrackSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA9981B12602B6860018EAD6 /* Build configuration list for PBXProject "NutriTrackSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA9981C82602B6880018EAD6 /* Debug */,
+				DA9981C92602B6880018EAD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA9981CA2602B6880018EAD6 /* Build configuration list for PBXNativeTarget "NutriTrackSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA9981CB2602B6880018EAD6 /* Debug */,
+				DA9981CC2602B6880018EAD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA9981AE2602B6860018EAD6 /* Project object */;
+}
