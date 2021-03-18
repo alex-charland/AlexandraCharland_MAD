@@ -48,4 +48,19 @@ class RecipeTableViewController: UITableViewController {
             }
         }
     }
+    
+    @IBAction func unwindSegue (_ segue:UIStoryboardSegue){
+        if segue.identifier=="doneSegue"{
+            if let source = segue.source as? AddRecipeViewController {
+                //only add a country if there is text in the textfield
+                if source.newRecipe.isEmpty == false{
+                    //add country to our data model instance
+//                    continentsData.addCountry(index: selectedContinent, newCountry: source.addedCountry, newIndex: countryList.count)
+                    //add country to the array
+//                    countryList.append(source.addedCountry)
+//                    tableView.reloadData()
+                }
+            }
+        }
+    }
 }

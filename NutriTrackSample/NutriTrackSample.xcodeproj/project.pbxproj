@@ -23,6 +23,7 @@
 		DA9981EC2602C3620018EAD6 /* RecipeDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9981EB2602C3620018EAD6 /* RecipeDataLoader.swift */; };
 		DA9981EF2602C3B30018EAD6 /* sampleRecipes.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA9981EE2602C3B30018EAD6 /* sampleRecipes.plist */; };
 		DA9981F22602C5700018EAD6 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9981F12602C5700018EAD6 /* RecipeViewController.swift */; };
+		DAE4A37B2603A49A000213E5 /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE4A37A2603A49A000213E5 /* AddRecipeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		DA9981EB2602C3620018EAD6 /* RecipeDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDataLoader.swift; sourceTree = "<group>"; };
 		DA9981EE2602C3B30018EAD6 /* sampleRecipes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sampleRecipes.plist; sourceTree = "<group>"; };
 		DA9981F12602C5700018EAD6 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		DAE4A37A2603A49A000213E5 /* AddRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				DA9981E82602C1B70018EAD6 /* RecipNutTableViewController.swift */,
 				DA9981E52602C1900018EAD6 /* IngNutTableViewController.swift */,
 				DA9981E22602C0940018EAD6 /* RecipeTableViewController.swift */,
+				DAE4A37A2603A49A000213E5 /* AddRecipeViewController.swift */,
 				DA9981DF2602BBBB0018EAD6 /* IngredientTableViewController.swift */,
 				DA9981EB2602C3620018EAD6 /* RecipeDataLoader.swift */,
 				DA9981CF2602BA070018EAD6 /* GroceryTableViewController.swift */,
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAE4A37B2603A49A000213E5 /* AddRecipeViewController.swift in Sources */,
 				DA9981E92602C1B70018EAD6 /* RecipNutTableViewController.swift in Sources */,
 				DA9981BA2602B6860018EAD6 /* AppDelegate.swift in Sources */,
 				DA9981D02602BA070018EAD6 /* GroceryTableViewController.swift in Sources */,
