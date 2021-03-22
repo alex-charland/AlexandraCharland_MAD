@@ -16,10 +16,9 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var newIngredientField: UITextField!
     
     @IBAction func openIngredientAlert(_ sender: UITextField) {
-        let addalert = UIAlertController(title: "New Item", message: "Add a new item to your grocery list", preferredStyle: .alert)
+        let addalert = UIAlertController(title: "New ingredient", message: "Choose an ingredient from your grocery database", preferredStyle: .alert)
         //add textfield to the alert
-        addalert.addTextField(configurationHandler: {(UITextField) in
-        })
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         addalert.addAction(cancelAction)
         let addItemAction = UIAlertAction(title: "Add", style: .default, handler: {(UIAlertAction)in
