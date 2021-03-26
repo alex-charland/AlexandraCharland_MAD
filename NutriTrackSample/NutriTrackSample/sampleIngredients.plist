@@ -176,12 +176,12 @@
 	</dict>
 	<dict>
 		<key>category</key>
-		<string>Dairy &amp; Eggs</string>
+		<string>Dry Ingredients &amp; Spices</string>
 		<key>ingredients</key>
 		<array>
 			<dict>
 				<key>name</key>
-				<string>Challenge Butter, Salted</string>
+				<string>Arm &amp; Hammer Baking Soda</string>
 				<key>nutrition</key>
 				<dict>
 					<key>serving_size</key>
@@ -214,7 +214,7 @@
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>Horizon Organic Heavy Whipping Cream</string>
+				<string>C&amp;H Light Brown Sugar</string>
 				<key>nutrition</key>
 				<dict>
 					<key>serving_size</key>
@@ -247,7 +247,7 @@
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>Kirkland Signature Grade A Organic Large Eggs</string>
+				<string>C&amp;H Pure White Cane Sugar</string>
 				<key>nutrition</key>
 				<dict>
 					<key>serving_size</key>
@@ -280,7 +280,7 @@
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>Kirkland Signature Grade A Organic Medium Eggs</string>
+				<string>King Arthur Whole Wheat Flour</string>
 				<key>nutrition</key>
 				<dict>
 					<key>serving_size</key>
@@ -313,7 +313,7 @@
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>Horizon Organic 2% Reduced Fat Milk</string>
+				<string>Salt</string>
 				<key>nutrition</key>
 				<dict>
 					<key>serving_size</key>
@@ -345,6 +345,30 @@
 				</dict>
 			</dict>
 		</array>
+	</dict>
+	<dict>
+		<key>category</key>
+		<string>Grains</string>
+		<key>ingredients</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>category</key>
+		<string>Meat</string>
+		<key>ingredients</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>category</key>
+		<string>Seafood</string>
+		<key>ingredients</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>category</key>
+		<string>Vegetables</string>
+		<key>ingredients</key>
+		<array/>
 	</dict>
 </array>
 </plist>

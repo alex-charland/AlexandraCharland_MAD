@@ -166,7 +166,9 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
                 pickerView.reloadComponent(ingComponent) //reloads the album component
                 pickerView.selectRow(0, inComponent: ingComponent, animated: true) //set the album component back to 0
             }
-            ingredientPick = ingredientNames[row]
+            if(ingredientNames.count > 1){
+                ingredientPick = ingredientNames[row]
+            }
         }
     }
     
