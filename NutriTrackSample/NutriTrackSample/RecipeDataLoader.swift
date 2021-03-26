@@ -17,6 +17,7 @@ class RecipeDataLoader{
                 let data = try Data(contentsOf: pathURL)
                 //decodes the property list
                 recipeData = try plistdecoder.decode([RecipeData].self, from: data)
+                
             } catch {
                 // handle error
                 print(error)
@@ -42,6 +43,7 @@ class RecipeDataLoader{
     
     func addRecipe(index:Int, newRecipe:RecipeData){
         recipeData.insert(newRecipe, at: recipeData.endIndex)
+        recipeData = recipeData.sorted{$0.recipe < $1.recipe}
     }
     
     func addIngredient(index:Int, newIngredient:String, newIndex: Int){

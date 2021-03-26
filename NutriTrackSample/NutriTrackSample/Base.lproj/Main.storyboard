@@ -235,6 +235,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhN-Mq-St0">
                                 <rect key="frame" x="20" y="403" width="25" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="addIngredientButton:" destination="7O0-xp-yJ6" eventType="touchUpInside" id="8Tl-tL-5ca"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add ingredient" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OlY-3G-xuh">
                                 <rect key="frame" x="53" y="406" width="231" height="21"/>
@@ -258,13 +261,25 @@
                                     <action selector="openIngredientAlert:" destination="7O0-xp-yJ6" eventType="editingDidBegin" id="1XB-r3-Txh"/>
                                 </connections>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Measure" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YX1-c9-ReV">
+                                <rect key="frame" x="75" y="331" width="101" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="openQuantityAlert:" destination="7O0-xp-yJ6" eventType="editingDidBegin" id="VEx-N8-hNu"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jJT-2A-Ycl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="amountField" destination="oSl-AR-JEF" id="K0Y-ga-PaA"/>
+                        <outlet property="ingredientField" destination="FSF-vv-kZ8" id="4mk-So-bem"/>
                         <outlet property="ingredientTable" destination="F9n-py-5rB" id="bZn-gJ-OuD"/>
-                        <outlet property="newIngredientField" destination="cft-ck-GQ9" id="pKg-wO-xBb"/>
+                        <outlet property="quantityField" destination="YX1-c9-ReV" id="re5-pu-Uyb"/>
+                        <outlet property="titleField" destination="I01-4v-qdw" id="AWc-cW-zwe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rv6-nW-Zzb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

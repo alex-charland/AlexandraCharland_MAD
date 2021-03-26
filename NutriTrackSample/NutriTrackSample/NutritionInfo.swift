@@ -10,6 +10,11 @@ struct RecipeData : Codable {
     var recipe : String
     var ingredients : [String]
     var nutrition : Nutrition
+    init(newName : String, allIngredients : [String]){
+        recipe = newName
+        ingredients = allIngredients
+        nutrition = Nutrition()
+    }
 }
 
 struct Nutrition : Codable{

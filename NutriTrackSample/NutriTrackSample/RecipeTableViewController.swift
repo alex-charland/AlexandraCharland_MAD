@@ -18,7 +18,7 @@ class RecipeTableViewController: UITableViewController {
         // Do any additional setup after loading the view.
         recipeData.loadData(filename: file)
         recipeList=recipeData.getRecipes()
-        
+        recipeList = recipeList.sorted{ $0 < $1 }
         //enables large titles
         navigationController?.navigationBar.prefersLargeTitles = true
     }
@@ -53,12 +53,15 @@ class RecipeTableViewController: UITableViewController {
         if segue.identifier=="doneSegue"{
             if let source = segue.source as? AddRecipeViewController {
                 //only add a country if there is text in the textfield
-                if source.newRecipe.isEmpty == false{
-                    //add country to our data model instance
+                if ((source.newRecipe.isEmpty == false) && (source.ingredientList.isEmpty == false)){
+                    //add recipe to recipe data
 //                    continentsData.addCountry(index: selectedContinent, newCountry: source.addedCountry, newIndex: countryList.count)
+                    let addedRecipe = RecipeData(newName: source.newRecipe, allIngredients: source.ingredientList)
+                    recipeData.addRecipe(index: recipeList.endIndex, newRecipe: addedRecipe)
                     //add country to the array
-//                    countryList.append(source.addedCountry)
-//                    tableView.reloadData()
+                    recipeList.append(source.newRecipe)
+                    recipeList = recipeList.sorted{ $0 < $1 }
+                    tableView.reloadData()
                 }
             }
         }
