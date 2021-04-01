@@ -7,15 +7,21 @@
 
 import UIKit
 
-class AddIngredientViewController: UIViewController {
+class AddIngredientViewController: UIViewController, UITextFieldDelegate {
     
     var newIngredient = String()
     
     @IBOutlet weak var searchField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "doneSegue"{

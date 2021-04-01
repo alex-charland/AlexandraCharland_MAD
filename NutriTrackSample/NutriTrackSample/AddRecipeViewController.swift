@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
+class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     var quantities = ["...","Teaspoon","Tablespoon","Cup","Milligram","Gram","Ounce","Fluid Ounce","Quantity"]
     var measurePick = ""
@@ -84,7 +84,7 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBAction func openIngredientAlert(_ sender: UITextField) {
         let ingredientAlert = UIAlertController(title: "New ingredient", message: "Choose an ingredient from your grocery database \n\n\n\n\n\n", preferredStyle: .alert)
         
-        let ingFrame = UIPickerView(frame: CGRect(x: 5, y: 30, width: 250, height: 140))
+        let ingFrame = UIPickerView(frame: CGRect(x: 5, y: 50, width: 250, height: 140))
         ingFrame.tag = 2
         
         ingredientAlert.view.addSubview(ingFrame)
@@ -172,6 +172,11 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ingData.loadData(filename: file)
@@ -181,6 +186,8 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
         for ingredient in ingredients{
             ingredientNames.append(ingredient.name)
         }
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
     
