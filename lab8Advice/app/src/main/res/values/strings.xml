@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RandAdvice</string>
+    <string name="today">Advice of the day</string>
+    <string name="get_new">Get more advice</string>
+</resources>
