@@ -27,7 +27,12 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
     var ingredientNames = [String]()
     
     var newRecipe = String()
+    var newIngVals = [Ingredient]()
+    var recipeNutrition = Nutrition()
     var ingredientList = [String]()
+    var amountList = [Double]()
+    var quantityList = [String]()
+    var ingredientFieldList = [String]()
     
     @IBOutlet weak var ingredientTable: UITableView!
     @IBOutlet weak var ingredientField: UITextField!
@@ -44,6 +49,9 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         else if(amountField.text != "" && quantityField.text != "" && ingredientField.text != ""){
             ingredientList.append(amountField.text! + " " + quantityField.text! + " " + ingredientField.text!)
+            amountList.append(Double(amountField.text!)!)
+            quantityList.append(quantityField.text!)
+            ingredientFieldList.append(ingredientField.text!)
             ingredientTable.reloadData()
             amountField.text = ""
             quantityField.text = ""
@@ -159,12 +167,12 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
             if (component == categComponent) {
                 ingredientNames = []
                 ingredientNames.append("...")
-                ingredients = ingData.getIngredients(index: row) //gets the albums for the selected artist
+                ingredients = ingData.getIngredients(index: row)
                 for ingredient in ingredients{
                     ingredientNames.append(ingredient.name)
                 }
-                pickerView.reloadComponent(ingComponent) //reloads the album component
-                pickerView.selectRow(0, inComponent: ingComponent, animated: true) //set the album component back to 0
+                pickerView.reloadComponent(ingComponent)
+                pickerView.selectRow(0, inComponent: ingComponent, animated: true)
             }
             if(ingredientNames.count > 1){
                 ingredientPick = ingredientNames[row]
@@ -177,9 +185,156 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
         return true
     }
     
+    func calculateNutrition(){
+        var ingredientSearch = [Ingredient]()
+        var index = 0
+        for ing in ingredientFieldList{
+            for categ in 0...categs.count-1{
+                ingredientSearch = ingData.getIngredients(index: categ)
+                for ingredient in ingredientSearch{
+                    if ing == ingredient.name{
+                        newIngVals.append(convert(ing: ingredient, desired: quantityList[index], amount: amountList[index]))
+                        index += 1
+                        break
+                    }
+                }
+                break
+            }
+        }
+        for ing in newIngVals{
+            recipeNutrition.calories += ing.nutrition.calories
+            recipeNutrition.total_fat += ing.nutrition.total_fat
+            recipeNutrition.saturated_fat += ing.nutrition.saturated_fat
+            recipeNutrition.trans_fat += ing.nutrition.trans_fat
+            recipeNutrition.cholesterol += ing.nutrition.cholesterol
+            recipeNutrition.sodium += ing.nutrition.sodium
+            recipeNutrition.total_carbohydrates += ing.nutrition.total_carbohydrates
+            recipeNutrition.dietary_fiber += ing.nutrition.dietary_fiber
+            recipeNutrition.sugar += ing.nutrition.sugar
+            recipeNutrition.protein += ing.nutrition.protein
+            recipeNutrition.vitamin_a += ing.nutrition.vitamin_a
+            recipeNutrition.calcium += ing.nutrition.calcium
+        }
+        
+    }
+    
+    func convert(ing: Ingredient,desired: String, amount: Double)->Ingredient{
+        //["...","Teaspoon","Tablespoon","Cup","Milligram","Gram","Ounce","Fluid Ounce","Quantity"]
+        var multiple : Double = 0.0
+        switch desired{
+        case "Teaspoon":
+            switch ing.nutrition.serving_size_unit{
+            case "cup":
+                multiple = 0.02 * amount
+            case "g":
+                multiple = 4.2 * amount
+            case "mg":
+                multiple = 4928.9 * amount
+            case "oz":
+                multiple = 0.16 * amount
+            default:
+                multiple = amount
+            }
+        case "Tablespoon":
+            switch ing.nutrition.serving_size_unit{
+            case "cup":
+                multiple = 0.0625 * amount
+            case "g":
+                multiple = 15 * amount
+            case "mg":
+                multiple = 14787 * amount
+            case "oz":
+                multiple = 0.5 * amount
+            default:
+                multiple = amount
+            }
+        case "Cup":
+            switch ing.nutrition.serving_size_unit{
+            case "cup":
+                multiple = amount
+            case "g":
+                multiple = 240 * amount
+            case "mg":
+                multiple = 236588 * amount
+            case "oz":
+                multiple = 8 * amount
+            default:
+                multiple = amount
+            }
+        case "Milligram":
+            switch ing.nutrition.serving_size_unit{
+            case "cup":
+                multiple = 0.000004 * amount
+            case "g":
+                multiple = 0.001 * amount
+            case "mg":
+                multiple = amount
+            case "oz":
+                multiple = 0.000035274 * amount
+            default:
+                multiple = amount
+            }
+        case "Gram":
+            switch ing.nutrition.serving_size_unit{
+            case "cup":
+                multiple = 0.004 * amount
+            case "g":
+                multiple = amount
+            case "mg":
+                multiple = 1000 * amount
+            case "oz":
+                multiple = 0.035274 * amount
+            default:
+                multiple = amount
+            }
+        case "Ounce":
+            switch ing.nutrition.serving_size_unit{
+            case "cup":
+                multiple = 0.125 * amount
+            case "g":
+                multiple = 28.349 * amount
+            case "mg":
+                multiple = 28349.55 * amount
+            case "oz":
+                multiple = amount
+            default:
+                multiple = amount
+            }
+        case "Fluid Ounce":
+            switch ing.nutrition.serving_size_unit{
+            case "cup":
+                multiple = 0.125 * amount
+            case "g":
+                multiple = 28.349 * amount
+            case "mg":
+                multiple = 28349.55 * amount
+            case "oz":
+                multiple = amount
+            default:
+                multiple = amount
+            }
+        default:
+            multiple = amount
+        }
+        var newIng = ing
+        newIng.nutrition.calories *= multiple
+        newIng.nutrition.total_fat *= multiple
+        newIng.nutrition.saturated_fat *= multiple
+        newIng.nutrition.trans_fat *= multiple
+        newIng.nutrition.cholesterol *= multiple
+        newIng.nutrition.sodium *= multiple
+        newIng.nutrition.total_carbohydrates *= multiple
+        newIng.nutrition.dietary_fiber *= multiple
+        newIng.nutrition.sugar *= multiple
+        newIng.nutrition.protein *= multiple
+        newIng.nutrition.vitamin_a *= multiple
+        newIng.nutrition.calcium *= multiple
+        return newIng
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        ingData.loadData(filename: file)
+        ingData.loadData(file: "sampleIngredients.plist")
         categs = ingData.getCategories()
         ingredients = ingData.getIngredients(index: 0)
         ingredientNames.append("...")
@@ -193,7 +348,7 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "doneSegue"{
-            //only add a country if there is text in the textfield
+            calculateNutrition()
             if titleField.text?.isEmpty == false{
                 newRecipe = titleField.text!
             }

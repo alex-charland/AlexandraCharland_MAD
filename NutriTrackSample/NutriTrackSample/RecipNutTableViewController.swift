@@ -41,21 +41,22 @@ class RecipNutTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         recipeItem.append(recipeData.getNutrition(index: selectedRecipe))
         let ing = recipeItem[0]
-        servingSize.text = ing.serving_size
-        calories.text = ing.calories
-        totalFat.text = ing.total_fat
-        saturatedFat.text = ing.saturated_fat
-        transFat.text = ing.trans_fat
-        cholesterol.text = ing.cholesterol
-        sodium.text = ing.sodium
-        totalCarbohydrates.text = ing.total_carbohydrates
-        dietaryFiber.text = ing.dietary_fiber
-        sugar.text = ing.sugar
-        protein.text = ing.protein
-        vitaminA.text = ing.vitamin_a
-        calcium.text = ing.calcium
+        servingSize.text = String(ing.serving_size) + " " + ing.serving_size_unit
+        calories.text = String(ing.calories)
+        totalFat.text = String(ing.total_fat) + " g"
+        saturatedFat.text = String(ing.saturated_fat) + " g"
+        transFat.text = String(ing.trans_fat) + " g"
+        cholesterol.text = String(ing.cholesterol) + " mg"
+        sodium.text = String(ing.sodium) + " mg"
+        totalCarbohydrates.text = String(ing.total_carbohydrates) + " g"
+        dietaryFiber.text = String(ing.dietary_fiber) + " g"
+        sugar.text = String(ing.sugar) + " g"
+        protein.text = String(ing.protein) + " g"
+        vitaminA.text = String(ing.vitamin_a) + "%"
+        calcium.text = String(ing.calcium) + "%"
         
     }
+    
     // MARK: - Table view data source
 
 

@@ -37,19 +37,19 @@ class IngNutTableViewController: UITableViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         let ing = ingredientItem[selectedIngredient]
-        servingSize.text = ing.nutrition.serving_size
-        calories.text = ing.nutrition.calories
-        totalFat.text = ing.nutrition.total_fat
-        saturatedFat.text = ing.nutrition.saturated_fat
-        transFat.text = ing.nutrition.trans_fat
-        cholesterol.text = ing.nutrition.cholesterol
-        sodium.text = ing.nutrition.sodium
-        totalCarbohydrates.text = ing.nutrition.total_carbohydrates
-        dietaryFiber.text = ing.nutrition.dietary_fiber
-        sugar.text = ing.nutrition.sugar
-        protein.text = ing.nutrition.protein
-        vitaminA.text = ing.nutrition.vitamin_a
-        calcium.text = ing.nutrition.calcium
+        servingSize.text = String(ing.nutrition.serving_size) + " " + ing.nutrition.serving_size_unit
+        calories.text = String(ing.nutrition.calories)
+        totalFat.text = String(ing.nutrition.total_fat) + " g"
+        saturatedFat.text = String(ing.nutrition.saturated_fat) + " g"
+        transFat.text = String(ing.nutrition.trans_fat) + " g"
+        cholesterol.text = String(ing.nutrition.cholesterol) + " mg"
+        sodium.text = String(ing.nutrition.sodium) + " mg"
+        totalCarbohydrates.text = String(ing.nutrition.total_carbohydrates) + " g"
+        dietaryFiber.text = String(ing.nutrition.dietary_fiber) + " g"
+        sugar.text = String(ing.nutrition.sugar) + " g"
+        protein.text = String(ing.nutrition.protein) + " g"
+        vitaminA.text = String(ing.nutrition.vitamin_a) + "%"
+        calcium.text = String(ing.nutrition.calcium) + "%"
         
     }
     // MARK: - Table view data source

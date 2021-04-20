@@ -16,10 +16,12 @@ class IngredientTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         ingredientList = ingredientData.getIngredients(index: selectedCategory)
+        ingredientList = ingredientList.sorted{ $0.name < $1.name }
         ingredientNames = [String]()
         for ingredient in ingredientList{
             ingredientNames.append(ingredient.name)
         }
+        ingredientNames = ingredientNames.sorted{$0 < $1}
     }
 
     override func viewDidLoad() {
@@ -72,13 +74,15 @@ class IngredientTableViewController: UITableViewController {
                 //only add a country if there is text in the textfield
                 if source.newIngredient.isEmpty == false{
                     //add country to our data model instance
-                    let newIng = Ingredient(newName: source.newIngredient)
-                    ingredientData.addIngredient(categ: selectedCategory, newIngredient: newIng, newIndex: ingredientList.count)
+                    ingredientData.addIngredient(categ: selectedCategory, newIngredient: source.newIng, newIndex: ingredientList.count)
 //                    continentsData.addCountry(index: selectedContinent, newCountry: source.addedCountry, newIndex: countryList.count)
                     //add country to the array
 //                    countryList.append(source.addedCountry)
-                    ingredientNames.append(source.newIngredient)
+                    ingredientNames.append(source.newIng.name)
+                    ingredientNames = ingredientNames.sorted{$0 < $1}
                     ingredientList = ingredientData.getIngredients(index: selectedCategory)
+                    ingredientList = ingredientList.sorted{ $0.name < $1.name }
+                    ingredientData.saveData(fileName: "sampleIngredients.plist")
                     tableView.reloadData()
                 }
             }
@@ -93,17 +97,18 @@ class IngredientTableViewController: UITableViewController {
 
 
     // Override to support editing the table view.
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//            //Delete the country from the array
-//            ingredientList.remove(at: indexPath.row)
-//            // Delete the row from the table
-//            tableView.deleteRows(at: [indexPath], with: .fade)
-//            //Delete from the data model instance
-//            ingredientData.deleteIngredient(index: selectedCategory, currIndex: indexPath.row)
-//        } else if editingStyle == .insert {
-//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-//        }
-//    }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            ingredientList.remove(at: indexPath.row)
+            ingredientNames.remove(at: indexPath.row)
+            // Delete the row from the table
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            //Delete from the data model instance
+            ingredientData.deleteIngredient(categ: selectedCategory, index: indexPath.row)
+            ingredientData.saveData(fileName: "sampleIngredients.plist")
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
 
 }

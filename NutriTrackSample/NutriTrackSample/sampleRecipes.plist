@@ -21,31 +21,33 @@
 		<key>nutrition</key>
 		<dict>
 			<key>serving_size</key>
-			<string>1</string>
+			<integer>1</integer>
+			<key>serving_size_unit</key>
+			<string>g</string>
 			<key>calories</key>
-			<string>120</string>
+			<integer>120</integer>
 			<key>total_fat</key>
-			<string>9.0 g</string>
+			<real>9</real>
 			<key>saturated_fat</key>
-			<string>4.5 g</string>
+			<real>4.5</real>
 			<key>trans_fat</key>
-			<string>0.9 g</string>
+			<real>0.9</real>
 			<key>cholesterol</key>
-			<string>7.8 mg</string>
+			<real>7.8</real>
 			<key>sodium</key>
-			<string>163.9 mg</string>
+			<real>163.9</real>
 			<key>total_carbohydrates</key>
-			<string>23 g</string>
+			<integer>23</integer>
 			<key>dietary_fiber</key>
-			<string>0.4 g</string>
+			<real>0.4</real>
 			<key>sugar</key>
-			<string>14.8 g</string>
+			<real>14.8</real>
 			<key>protein</key>
-			<string>2 g</string>
+			<integer>2</integer>
 			<key>vitamin_a</key>
-			<string>2%</string>
+			<integer>2</integer>
 			<key>calcium</key>
-			<string>0%</string>
+			<integer>0</integer>
 		</dict>
 	</dict>
 </array>

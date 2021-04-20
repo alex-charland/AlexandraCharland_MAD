@@ -18,33 +18,35 @@ struct RecipeData : Codable {
 }
 
 struct Nutrition : Codable{
-    var serving_size : String
-    var calories : String
-    var total_fat : String
-    var saturated_fat : String
-    var trans_fat : String
-    var cholesterol : String
-    var sodium : String
-    var total_carbohydrates : String
-    var dietary_fiber : String
-    var sugar : String
-    var protein : String
-    var vitamin_a : String
-    var calcium : String
+    var serving_size : Double
+    var serving_size_unit : String
+    var calories : Double
+    var total_fat : Double
+    var saturated_fat : Double
+    var trans_fat : Double
+    var cholesterol : Double
+    var sodium : Double
+    var total_carbohydrates : Double
+    var dietary_fiber : Double
+    var sugar : Double
+    var protein : Double
+    var vitamin_a : Double
+    var calcium : Double
     init(){
-        serving_size = "1"
-        calories = "120"
-        total_fat = "9.0 g"
-        saturated_fat = "4.5 g"
-        trans_fat = "0.9 g"
-        cholesterol = "7.8 mg"
-        sodium = "163.9 mg"
-        total_carbohydrates = "23 g"
-        dietary_fiber = "0.4 g"
-        sugar = "14.8 g"
-        protein = "2 g"
-        vitamin_a = "2%"
-        calcium = "0%"
+        serving_size = 0.0
+        serving_size_unit = ""
+        calories = 0.0
+        total_fat = 0.0 //g
+        saturated_fat = 0.0 //g
+        trans_fat = 0.0 //g
+        cholesterol = 0.0 //mg
+        sodium = 0.0 //mg
+        total_carbohydrates = 0.0 //g
+        dietary_fiber = 0.0 //g
+        sugar = 0.0 //g
+        protein = 0.0 //g
+        vitamin_a = 0//%
+        calcium = 0//%
     }
 }
 
@@ -60,4 +62,9 @@ struct Ingredient : Codable{
 struct IngredientData : Codable {
     var category : String
     var ingredients : [Ingredient]
+    init(newCateg: String){
+        category = newCateg
+        ingredients = [Ingredient]()
+    }
 }
+
