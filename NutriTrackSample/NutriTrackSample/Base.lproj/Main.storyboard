@@ -390,7 +390,6 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="callIngr:" destination="kAd-uh-Zvp" eventType="editingChanged" id="60a-80-ANk"/>
-                                    <action selector="callIngr:" destination="kAd-uh-Zvp" eventType="editingDidEnd" id="MgT-gL-RLc"/>
                                 </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fui-2I-BMV">
