@@ -121,7 +121,16 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.textLabel?.text = ingredientList[indexPath.row]
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            ingredientList.remove(at: indexPath.row)
+            // Delete the row from the table
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            //Delete from the data model instance
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         if(pickerView.tag == 1){
             return 1
@@ -215,7 +224,7 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
             recipeNutrition.vitamin_a += ing.nutrition.vitamin_a
             recipeNutrition.calcium += ing.nutrition.calcium
         }
-        
+        recipeNutrition.serving_size = 1
     }
     
     func convert(ing: Ingredient,desired: String, amount: Double)->Ingredient{

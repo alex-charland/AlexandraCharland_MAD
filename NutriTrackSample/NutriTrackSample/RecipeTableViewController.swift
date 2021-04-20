@@ -13,6 +13,7 @@ class RecipeTableViewController: UITableViewController {
     var recipeData = RecipeDataLoader()
     let initFile = "sampleRecipes"
     let file = "sampleRecipes.plist"
+    var searchController = UISearchController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,14 @@ class RecipeTableViewController: UITableViewController {
         recipeList = recipeList.sorted{ $0 < $1 }
         //enables large titles
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let resultsController = RecipeSearchViewController()
+        resultsController.allRecipes = recipeList
+        searchController = UISearchController(searchResultsController: resultsController)
+        searchController.searchBar.placeholder = "Enter a recipe title"
+        searchController.searchBar.sizeToFit()
+        tableView.tableHeaderView=searchController.searchBar
+        searchController.searchResultsUpdater = resultsController
     }
     @objc func applicationWillResignActive(_ notification: Notification){
         recipeData.saveData(fileName: file)
