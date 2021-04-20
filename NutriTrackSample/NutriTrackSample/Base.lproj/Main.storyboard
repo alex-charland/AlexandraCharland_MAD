@@ -389,6 +389,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="callIngr:" destination="kAd-uh-Zvp" eventType="editingChanged" id="60a-80-ANk"/>
                                     <action selector="callIngr:" destination="kAd-uh-Zvp" eventType="editingDidEnd" id="MgT-gL-RLc"/>
                                 </connections>
                             </textField>

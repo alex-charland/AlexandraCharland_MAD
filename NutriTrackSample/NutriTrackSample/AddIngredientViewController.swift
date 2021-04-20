@@ -16,6 +16,12 @@ class AddIngredientViewController: UIViewController, UITextFieldDelegate,UITable
     
     @IBOutlet weak var apiSearchResults: UITableView!
     @IBOutlet weak var searchField: UITextField!
+//    @IBAction func callIngr(_ sender: UITextField) {
+//        if searchField.text?.isEmpty == false{
+//            foodDataHandler.onDataUpdate = {[weak self] (data:[Food]) in self?.render()}
+//            foodDataHandler.loadjson(search: searchField.text!)
+//        }
+//    }
     @IBAction func callIngr(_ sender: UITextField) {
         if searchField.text?.isEmpty == false{
             foodDataHandler.onDataUpdate = {[weak self] (data:[Food]) in self?.render()}
