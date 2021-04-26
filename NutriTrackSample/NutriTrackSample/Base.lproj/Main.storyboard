@@ -366,6 +366,9 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVb-Oq-COi">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="wHd-Dp-avx"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Add Ingredient" id="yaM-Fi-FOj">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="eFz-RU-CPQ">
@@ -383,9 +386,6 @@
                             </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search ingredient" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LXk-ZG-aH6">
                                 <rect key="frame" x="20" y="91" width="374" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="POM-c5-0HI"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -415,17 +415,16 @@
                         <viewLayoutGuide key="safeArea" id="wxE-gg-oeE"/>
                         <color key="backgroundColor" red="1" green="0.94381242990000003" blue="0.75934499499999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="LXk-ZG-aH6" firstAttribute="leading" secondItem="AuG-vh-yWv" secondAttribute="leadingMargin" id="3lV-pI-ggw"/>
-                            <constraint firstItem="Fui-2I-BMV" firstAttribute="trailing" secondItem="LXk-ZG-aH6" secondAttribute="trailing" id="525-6n-nYu"/>
-                            <constraint firstAttribute="trailing" secondItem="nVb-Oq-COi" secondAttribute="trailing" id="AFc-KH-9jR"/>
-                            <constraint firstItem="nVb-Oq-COi" firstAttribute="top" secondItem="wxE-gg-oeE" secondAttribute="top" id="J1a-nd-JPb"/>
-                            <constraint firstItem="Fui-2I-BMV" firstAttribute="bottom" secondItem="wxE-gg-oeE" secondAttribute="bottom" id="MRe-Yd-Vhd"/>
-                            <constraint firstItem="Fui-2I-BMV" firstAttribute="top" secondItem="LXk-ZG-aH6" secondAttribute="bottom" constant="32" id="WZj-Qc-YSC"/>
-                            <constraint firstItem="nVb-Oq-COi" firstAttribute="centerX" secondItem="LXk-ZG-aH6" secondAttribute="centerX" id="f4K-0S-E5X"/>
-                            <constraint firstItem="Fui-2I-BMV" firstAttribute="leading" secondItem="LXk-ZG-aH6" secondAttribute="leading" id="oLY-pS-bLN"/>
-                            <constraint firstItem="wxE-gg-oeE" firstAttribute="bottom" secondItem="LXk-ZG-aH6" secondAttribute="bottom" constant="683" id="p1f-GE-WQl"/>
-                            <constraint firstItem="nVb-Oq-COi" firstAttribute="leading" secondItem="AuG-vh-yWv" secondAttribute="leading" id="rzG-in-Xgt"/>
-                            <constraint firstItem="LXk-ZG-aH6" firstAttribute="top" secondItem="nVb-Oq-COi" secondAttribute="bottom" constant="47" id="tYP-Jh-tba"/>
+                            <constraint firstItem="LXk-ZG-aH6" firstAttribute="leading" secondItem="AuG-vh-yWv" secondAttribute="leadingMargin" id="2fD-gl-AfK"/>
+                            <constraint firstItem="nVb-Oq-COi" firstAttribute="centerX" secondItem="LXk-ZG-aH6" secondAttribute="centerX" id="57C-zW-ER2"/>
+                            <constraint firstItem="LXk-ZG-aH6" firstAttribute="trailing" secondItem="Fui-2I-BMV" secondAttribute="trailing" id="7W9-gh-COK"/>
+                            <constraint firstItem="Fui-2I-BMV" firstAttribute="bottom" secondItem="wxE-gg-oeE" secondAttribute="bottom" id="9dc-Ic-wNk"/>
+                            <constraint firstItem="nVb-Oq-COi" firstAttribute="leading" secondItem="wxE-gg-oeE" secondAttribute="leading" id="D0w-DL-Fip"/>
+                            <constraint firstItem="nVb-Oq-COi" firstAttribute="top" secondItem="wxE-gg-oeE" secondAttribute="top" id="iqw-3X-f1R"/>
+                            <constraint firstItem="LXk-ZG-aH6" firstAttribute="trailing" secondItem="AuG-vh-yWv" secondAttribute="trailingMargin" id="lar-0z-eKJ"/>
+                            <constraint firstItem="Fui-2I-BMV" firstAttribute="top" secondItem="LXk-ZG-aH6" secondAttribute="bottom" constant="32" id="o4q-Mz-fpl"/>
+                            <constraint firstItem="LXk-ZG-aH6" firstAttribute="top" secondItem="nVb-Oq-COi" secondAttribute="bottom" constant="47" id="oC2-aQ-feF"/>
+                            <constraint firstItem="LXk-ZG-aH6" firstAttribute="leading" secondItem="Fui-2I-BMV" secondAttribute="leading" id="roZ-U0-po5"/>
                         </constraints>
                     </view>
                     <connections>

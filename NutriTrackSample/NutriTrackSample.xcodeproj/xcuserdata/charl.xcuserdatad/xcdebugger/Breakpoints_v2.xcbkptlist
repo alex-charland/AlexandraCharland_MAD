@@ -212,7 +212,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "39658317-9F6A-4238-9F21-CEE00DB9CDDE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NutriTrackSample/IngredientDataLoader.swift"
