@@ -34,6 +34,7 @@ class GroceryTableViewController: UITableViewController {
         super.viewDidLoad()
         if(!ingredientData.loadData(file: file)){//If the animelist plist does not exist locally, load initial plist data
             ingredientData.loadInitialData(file: initFile)
+            ingredientData.saveData(fileName: file)
         }
         // Do any additional setup after loading the view.
         categoryList=ingredientData.getCategories()

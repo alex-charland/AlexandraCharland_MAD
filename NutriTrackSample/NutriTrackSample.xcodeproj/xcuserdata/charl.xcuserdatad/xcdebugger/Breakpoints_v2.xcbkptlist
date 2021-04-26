@@ -100,5 +100,145 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "66E279E3-D7E1-4945-B1C5-0F5812B3BE90"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NutriTrackSample/AddRecipeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "AddRecipeViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "66E279E3-D7E1-4945-B1C5-0F5812B3BE90 - 33483853ee0dd415"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NutriTrackSample.AddRecipeViewController.quantities.getter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "NutriTrackSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/charl/Documents/GitHub/AlexandraCharland_MAD/NutriTrackSample/NutriTrackSample/AddRecipeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "122">
+               </Location>
+               <Location
+                  uuid = "66E279E3-D7E1-4945-B1C5-0F5812B3BE90 - 85df83028acc2029"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NutriTrackSample.AddRecipeViewController.quantities.setter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "NutriTrackSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/charl/Documents/GitHub/AlexandraCharland_MAD/NutriTrackSample/NutriTrackSample/AddRecipeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "66E279E3-D7E1-4945-B1C5-0F5812B3BE90 - cf6832433f67038a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NutriTrackSample.AddRecipeViewController.quantities.modify : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "NutriTrackSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/charl/Documents/GitHub/AlexandraCharland_MAD/NutriTrackSample/NutriTrackSample/AddRecipeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "66E279E3-D7E1-4945-B1C5-0F5812B3BE90 - a88d8a9e93fddbe2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NutriTrackSample.AddRecipeViewController.quantities.modify : Swift.Array&lt;Swift.String&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "NutriTrackSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/charl/Documents/GitHub/AlexandraCharland_MAD/NutriTrackSample/NutriTrackSample/AddRecipeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "66E279E3-D7E1-4945-B1C5-0F5812B3BE90 - 4c31b23353dfe9f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NutriTrackSample.AddRecipeViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; NutriTrackSample.AddRecipeViewController"
+                  moduleName = "NutriTrackSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/charl/Documents/GitHub/AlexandraCharland_MAD/NutriTrackSample/NutriTrackSample/AddRecipeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "789">
+               </Location>
+               <Location
+                  uuid = "66E279E3-D7E1-4945-B1C5-0F5812B3BE90 - 4961aad719c42d8f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NutriTrackSample.AddRecipeViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;NutriTrackSample.AddRecipeViewController&gt;"
+                  moduleName = "NutriTrackSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/charl/Documents/GitHub/AlexandraCharland_MAD/NutriTrackSample/NutriTrackSample/AddRecipeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "721">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "39658317-9F6A-4238-9F21-CEE00DB9CDDE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NutriTrackSample/IngredientDataLoader.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "getIngredients(index:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5160FBA5-B005-431B-BB6E-2CD68BA80C8E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NutriTrackSample/AddRecipeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "346"
+            endingLineNumber = "346"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
