@@ -11,6 +11,7 @@
 		DA4F244C262E66CD008BB5B7 /* FoodDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F244A262E66CD008BB5B7 /* FoodDataHandler.swift */; };
 		DA4F2451262F18E4008BB5B7 /* IngrSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F2450262F18E4008BB5B7 /* IngrSearchViewController.swift */; };
 		DA4F2454262F1A05008BB5B7 /* RecipeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F2453262F1A05008BB5B7 /* RecipeSearchViewController.swift */; };
+		DA6F99FF263A25840020A830 /* AddIngredientInRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F99FE263A25840020A830 /* AddIngredientInRecipeViewController.swift */; };
 		DA9981BA2602B6860018EAD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9981B92602B6860018EAD6 /* AppDelegate.swift */; };
 		DA9981BC2602B6860018EAD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9981BB2602B6860018EAD6 /* SceneDelegate.swift */; };
 		DA9981C12602B6860018EAD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA9981BF2602B6860018EAD6 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		DA4F244A262E66CD008BB5B7 /* FoodDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDataHandler.swift; sourceTree = "<group>"; };
 		DA4F2450262F18E4008BB5B7 /* IngrSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngrSearchViewController.swift; sourceTree = "<group>"; };
 		DA4F2453262F1A05008BB5B7 /* RecipeSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSearchViewController.swift; sourceTree = "<group>"; };
+		DA6F99FE263A25840020A830 /* AddIngredientInRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientInRecipeViewController.swift; sourceTree = "<group>"; };
 		DA9981B62602B6860018EAD6 /* NutriTrackSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriTrackSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9981B92602B6860018EAD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA9981BB2602B6860018EAD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				DA9981B92602B6860018EAD6 /* AppDelegate.swift */,
 				DA9981BB2602B6860018EAD6 /* SceneDelegate.swift */,
 				DA9981BF2602B6860018EAD6 /* Main.storyboard */,
+				DA6F99FE263A25840020A830 /* AddIngredientInRecipeViewController.swift */,
 				DA4F2450262F18E4008BB5B7 /* IngrSearchViewController.swift */,
 				DA4F2453262F1A05008BB5B7 /* RecipeSearchViewController.swift */,
 				DA9981F12602C5700018EAD6 /* RecipeViewController.swift */,
@@ -193,6 +196,7 @@
 				DA4F2454262F1A05008BB5B7 /* RecipeSearchViewController.swift in Sources */,
 				DA9981BA2602B6860018EAD6 /* AppDelegate.swift in Sources */,
 				DA9981D02602BA070018EAD6 /* GroceryTableViewController.swift in Sources */,
+				DA6F99FF263A25840020A830 /* AddIngredientInRecipeViewController.swift in Sources */,
 				DA9981DD2602BAF20018EAD6 /* IngredientDataLoader.swift in Sources */,
 				DA9981D62602BA610018EAD6 /* NutritionInfo.swift in Sources */,
 				DA4F244B262E66CD008BB5B7 /* Food.swift in Sources */,

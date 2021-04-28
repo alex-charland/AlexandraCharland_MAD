@@ -16,7 +16,11 @@ class AddIngredientViewController: UIViewController, UITextFieldDelegate,UITable
     
     @IBOutlet weak var apiSearchResults: UITableView!
     @IBOutlet weak var searchField: UITextField!
-//    @IBAction func callIngr(_ sender: UITextField) {
+    
+    @IBAction func doneEditing(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    //    @IBAction func callIngr(_ sender: UITextField) {
 //        if searchField.text?.isEmpty == false{
 //            foodDataHandler.onDataUpdate = {[weak self] (data:[Food]) in self?.render()}
 //            foodDataHandler.loadjson(search: searchField.text!)
@@ -31,8 +35,8 @@ class AddIngredientViewController: UIViewController, UITextFieldDelegate,UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
-        view.addGestureRecognizer(tap)
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+//        view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,13 +62,13 @@ class AddIngredientViewController: UIViewController, UITextFieldDelegate,UITable
         newIng.nutrition.serving_size = allFood[indexPath.row].fields.nf_serving_size_qty ?? 0.0
         newIng.nutrition.serving_size_unit = allFood[indexPath.row].fields.nf_serving_size_unit ?? "units"
         searchField.text = newIng.name
-        tableView.deselectRow(at: indexPath, animated: true) //deselects the row that had been chosen
+        //tableView.deselectRow(at: indexPath, animated: true) //deselects the row that had been chosen
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        return true
+//    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "doneSegue"{
             //only add a country if there is text in the textfield

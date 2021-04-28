@@ -230,65 +230,93 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
     func convert(ing: Ingredient,desired: String, amount: Double)->Ingredient{
         //["...","Teaspoon","Tablespoon","Cup","Milligram","Gram","Ounce","Fluid Ounce","Quantity"]
         var multiple : Double = 0.0
+        var unit : String = ""
+        if(ing.nutrition.serving_size_unit.contains(" cup") || ing.nutrition.serving_size_unit.contains(" cup ")){
+            unit = "cup"
+        }
+        else if (ing.nutrition.serving_size_unit.contains(" tsp") || ing.nutrition.serving_size_unit.contains(" tsp ")){
+            unit = "tsp"
+        }
+        else if (ing.nutrition.serving_size_unit.contains(" tbsp") || ing.nutrition.serving_size_unit.contains(" tbsp ")){
+            unit = "tbsp"
+        }
+        else if (ing.nutrition.serving_size_unit.contains(" mg") || ing.nutrition.serving_size_unit.contains(" mg ")){
+            unit = "mg"
+        }
+        else if (ing.nutrition.serving_size_unit.contains(" g") || ing.nutrition.serving_size_unit.contains(" g ")){
+            unit = "g"
+        }
+        else{
+            unit = ing.nutrition.serving_size_unit
+        }
+        
         switch desired{
         case "Teaspoon":
-            switch ing.nutrition.serving_size_unit{
+            switch unit{
             case "cup":
-                multiple = 0.02 * amount
+                multiple = 0.0205372 * amount
+            case "tbsp":
+                multiple = 0.333 * amount
             case "g":
-                multiple = 4.2 * amount
+                multiple = 4.92892 * amount
             case "mg":
-                multiple = 4928.9 * amount
+                multiple = 4928.92 * amount
             case "oz":
-                multiple = 0.16 * amount
+                multiple = 0.1738625365 * amount
             default:
                 multiple = amount
             }
         case "Tablespoon":
-            switch ing.nutrition.serving_size_unit{
+            switch unit{
             case "cup":
-                multiple = 0.0625 * amount
+                multiple = 0.0616115 * amount
             case "g":
-                multiple = 15 * amount
+                multiple = 14.7868 * amount
             case "mg":
                 multiple = 14787 * amount
             case "oz":
-                multiple = 0.5 * amount
+                multiple = 0.5215890206 * amount
             default:
                 multiple = amount
             }
         case "Cup":
-            switch ing.nutrition.serving_size_unit{
-            case "cup":
-                multiple = amount
+            switch unit{
+            case "tsp":
+                multiple = 48.6922 * amount
+            case "tbsp":
+                multiple = 16.2307 * amount
             case "g":
                 multiple = 240 * amount
             case "mg":
-                multiple = 236588 * amount
+                multiple = 240000 * amount
             case "oz":
-                multiple = 8 * amount
+                multiple = 8.46575 * amount
             default:
                 multiple = amount
             }
         case "Milligram":
-            switch ing.nutrition.serving_size_unit{
+            switch unit{
             case "cup":
                 multiple = 0.000004 * amount
             case "g":
                 multiple = 0.001 * amount
-            case "mg":
-                multiple = amount
+            case "tsp":
+                multiple = 0.0002028842 * amount
+            case "tbsp":
+                multiple = 0.0000676279 * amount
             case "oz":
                 multiple = 0.000035274 * amount
             default:
                 multiple = amount
             }
         case "Gram":
-            switch ing.nutrition.serving_size_unit{
+            switch unit{
             case "cup":
                 multiple = 0.004 * amount
-            case "g":
-                multiple = amount
+            case "tsp":
+                multiple = 0.202884 * amount
+            case "tbsp":
+                multiple = 0.067628 * amount
             case "mg":
                 multiple = 1000 * amount
             case "oz":
@@ -297,28 +325,34 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
                 multiple = amount
             }
         case "Ounce":
-            switch ing.nutrition.serving_size_unit{
+            switch unit{
             case "cup":
                 multiple = 0.125 * amount
             case "g":
                 multiple = 28.349 * amount
             case "mg":
                 multiple = 28349.55 * amount
-            case "oz":
-                multiple = amount
+            case "tsp":
+                multiple = 5.751670372 * amount
+            case "tbsp":
+                multiple = 1.917218271 * amount
             default:
                 multiple = amount
             }
         case "Fluid Ounce":
-            switch ing.nutrition.serving_size_unit{
+            switch unit{
             case "cup":
-                multiple = 0.125 * amount
+                multiple = 0.123223 * amount
             case "g":
-                multiple = 28.349 * amount
+                multiple = 29.57354942 * amount
             case "mg":
-                multiple = 28349.55 * amount
+                multiple = 29573.54942 * amount
             case "oz":
-                multiple = amount
+                multiple = 1.0432 * amount
+            case "tsp":
+                multiple = 6 * amount
+            case "tbsp":
+                multiple = 2 * amount
             default:
                 multiple = amount
             }
@@ -326,18 +360,18 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
             multiple = amount
         }
         var newIng = ing
-        newIng.nutrition.calories *= multiple
-        newIng.nutrition.total_fat *= multiple
-        newIng.nutrition.saturated_fat *= multiple
-        newIng.nutrition.trans_fat *= multiple
-        newIng.nutrition.cholesterol *= multiple
-        newIng.nutrition.sodium *= multiple
-        newIng.nutrition.total_carbohydrates *= multiple
-        newIng.nutrition.dietary_fiber *= multiple
-        newIng.nutrition.sugar *= multiple
-        newIng.nutrition.protein *= multiple
-        newIng.nutrition.vitamin_a *= multiple
-        newIng.nutrition.calcium *= multiple
+        newIng.nutrition.calories += multiple
+        newIng.nutrition.total_fat += multiple
+        newIng.nutrition.saturated_fat += multiple
+        newIng.nutrition.trans_fat += multiple
+        newIng.nutrition.cholesterol += multiple
+        newIng.nutrition.sodium += multiple
+        newIng.nutrition.total_carbohydrates += multiple
+        newIng.nutrition.dietary_fiber += multiple
+        newIng.nutrition.sugar += multiple
+        newIng.nutrition.protein += multiple
+        newIng.nutrition.vitamin_a += multiple
+        newIng.nutrition.calcium += multiple
         return newIng
     }
     
@@ -363,6 +397,17 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
             }
         }
     }
+    
+//    @IBAction func unwindSegue (_ segue:UIStoryboardSegue){
+//        if segue.identifier=="doneSegue"{
+//            if let source = segue.source as? AddIngredientViewController {
+//                if source.newIngredient.isEmpty == false{
+//                    ingData.addIngredient(categ: selectedCategory, newIngredient: source.newIng, newIndex: ingredientList.count)
+//                    ingredientNames.append(source.newIng.name)
+//                    ingredientNames = ingredientNames.sorted{$0 < $1}
+//                    ingredientList = ingData.getIngredients(index: selectedCategory)
+//                    ingredientList = ingredientList.sorted{ $0.name < $1.name }
+//                    ingredientData.saveData(fileName: "sampleIngredients.plist")
     /*
     // MARK: - Navigation
 
