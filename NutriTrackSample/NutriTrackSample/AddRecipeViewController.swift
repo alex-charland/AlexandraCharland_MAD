@@ -99,12 +99,46 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBAction func openIngredientAlert(_ sender: UITextField) {
         let ingredientAlert = UIAlertController(title: "New ingredient", message: "Choose an ingredient from your grocery database \n\n\n\n\n\n", preferredStyle: .alert)
         
-        let ingFrame = UIPickerView(frame: CGRect(x: 5, y: 50, width: 250, height: 140))
+        let ingFrame = UIPickerView(frame: CGRect(x: -30, y: 50, width: 450, height: 140))
         ingFrame.tag = 2
         
         ingredientAlert.view.addSubview(ingFrame)
         ingFrame.dataSource = self
         ingFrame.delegate = self
+        
+        //Alert constraints: https://stackoverflow.com/questions/26774038/how-to-set-height-and-width-of-a-uialertcontroller-in-ios-8
+        
+        let widthConstraints = ingredientAlert.view.constraints.filter({ return $0.firstAttribute == .width })
+        ingredientAlert.view.removeConstraints(widthConstraints)
+        let newWidth = UIScreen.main.bounds.width * 1.0
+        let widthConstraint = NSLayoutConstraint(item: ingredientAlert.view,
+                                                 attribute: .width,
+                                                 relatedBy: .equal,
+                                                 toItem: nil,
+                                                 attribute: .notAnAttribute,
+                                                 multiplier: 1,
+                                                 constant: newWidth)
+        ingredientAlert.view.addConstraint(widthConstraint)
+        let firstContainer = ingredientAlert.view.subviews[0]
+        let constraint = firstContainer.constraints.filter({ return $0.firstAttribute == .width && $0.secondItem == nil })
+        firstContainer.removeConstraints(constraint)
+        ingredientAlert.view.addConstraint(NSLayoutConstraint(item: firstContainer,
+                                                    attribute: .width,
+                                                    relatedBy: .equal,
+                                                    toItem: ingredientAlert.view,
+                                                    attribute: .width,
+                                                    multiplier: 1.0,
+                                                    constant: 0))
+        let innerBackground = firstContainer.subviews[0]
+        let innerConstraints = innerBackground.constraints.filter({ return $0.firstAttribute == .width && $0.secondItem == nil })
+        innerBackground.removeConstraints(innerConstraints)
+        firstContainer.addConstraint(NSLayoutConstraint(item: innerBackground,
+                                                        attribute: .width,
+                                                        relatedBy: .equal,
+                                                        toItem: firstContainer,
+                                                        attribute: .width,
+                                                        multiplier: 1.0,
+                                                        constant: 0))
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         ingredientAlert.addAction(cancelAction)
         let chooseIngredientAction = UIAlertAction(title: "Done", style: .default, handler: {(UIAlertAction)in
@@ -174,6 +208,29 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
             }
         }
     }
+    
+    //Picker view font and size: https://stackoverflow.com/questions/44223862/how-do-i-change-the-font-size-in-a-uipickerview-in-swift
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var pickerLabel: UILabel? = (view as? UILabel)
+        if pickerLabel == nil {
+            pickerLabel = UILabel()
+            pickerLabel?.font = UIFont(name: "Helvetica", size: 14)
+            pickerLabel?.textAlignment = .center
+        }
+        if(pickerView.tag == 1){
+            pickerLabel?.text = quantities[row]
+        }
+        else{
+            if (component == categComponent) {
+                pickerLabel?.text = categs[row]
+            } else {
+                pickerLabel?.text = ingredientNames[row]
+            }
+        }
+
+        return pickerLabel!
+    }
+    
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if(pickerView.tag == 1){

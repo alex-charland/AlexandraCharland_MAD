@@ -64,7 +64,6 @@ class IngredientDataLoader{
     func getCategories() -> [String]{
         var categories = [String]()
         for categ in ingredientData{
-            print("Categ",categ)
             categories.append(categ.category)
         }
         return categories
@@ -83,10 +82,6 @@ class IngredientDataLoader{
     
     func addIngredient(categ:Int, newIngredient:Ingredient, newIndex:Int){
         ingredientData[categ].ingredients.insert(newIngredient, at: newIndex)
-        print("New ingredient added")
-        for i in ingredientData[categ].ingredients{
-            print(i)
-        }
     }
     
     func deleteIngredient(categ:Int, index: Int){
