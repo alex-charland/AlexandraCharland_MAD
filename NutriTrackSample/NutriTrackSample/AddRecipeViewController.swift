@@ -244,6 +244,7 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
                 for ingredient in ingredients{
                     ingredientNames.append(ingredient.name)
                 }
+                ingredientNames = ingredientNames.sorted{ $0 < $1 }
                 pickerView.reloadComponent(ingComponent)
                 pickerView.selectRow(0, inComponent: ingComponent, animated: true)
             }
@@ -476,6 +477,7 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
         for ingredient in ingredients{
             ingredientNames.append(ingredient.name)
         }
+        ingredientNames = ingredientNames.sorted{ $0 < $1 }
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
