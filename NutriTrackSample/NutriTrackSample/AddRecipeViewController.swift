@@ -39,10 +39,17 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var quantityField: UITextField!
     @IBOutlet weak var amountField: UITextField!
     @IBOutlet weak var titleField: UITextField!
+    @IBOutlet weak var servingField: UITextField!
     
     @IBAction func addIngredientButton(_ sender: UIButton) {
         if (titleField.text == ""){
             let textFieldAlert = UIAlertController(title: "Missing Title", message: "Please give a title for the new recipe, or cancel", preferredStyle: .alert)
+            let OKAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            textFieldAlert.addAction(OKAction)
+            present(textFieldAlert, animated: true, completion: nil)
+        }
+        if (servingField.text == ""){
+            let textFieldAlert = UIAlertController(title: "Missing Serving Size", message: "Please give a serving amount for the new recipe, or cancel", preferredStyle: .alert)
             let OKAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             textFieldAlert.addAction(OKAction)
             present(textFieldAlert, animated: true, completion: nil)
@@ -183,9 +190,12 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
                 pickerView.reloadComponent(ingComponent)
                 pickerView.selectRow(0, inComponent: ingComponent, animated: true)
             }
-            if(ingredientNames.count > 1){
-                ingredientPick = ingredientNames[row]
+            else{
+                if(ingredientNames.count > 1){
+                    ingredientPick = ingredientNames[row]
+                }
             }
+
         }
     }
     
@@ -197,8 +207,9 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
     func calculateNutrition(){
         var ingredientSearch = [Ingredient]()
         var index = 0
+        let range = 0...categs.count-1
         for ing in ingredientFieldList{
-            for categ in 0...categs.count-1{
+            for categ in range{
                 ingredientSearch = ingData.getIngredients(index: categ)
                 for ingredient in ingredientSearch{
                     if ing == ingredient.name{
@@ -207,7 +218,6 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
                         break
                     }
                 }
-                break
             }
         }
         for ing in newIngVals{
@@ -224,6 +234,31 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
             recipeNutrition.vitamin_a += ing.nutrition.vitamin_a
             recipeNutrition.calcium += ing.nutrition.calcium
         }
+        recipeNutrition.serving_size = Double(servingField.text!)!
+        recipeNutrition.calories /= recipeNutrition.serving_size
+        recipeNutrition.calories = round(recipeNutrition.calories * 10)/10.0
+        recipeNutrition.total_fat /= recipeNutrition.serving_size
+        recipeNutrition.total_fat = round(recipeNutrition.total_fat * 10)/10.0
+        recipeNutrition.saturated_fat /= recipeNutrition.serving_size
+        recipeNutrition.saturated_fat = round(recipeNutrition.saturated_fat * 10)/10.0
+        recipeNutrition.trans_fat /= recipeNutrition.serving_size
+        recipeNutrition.trans_fat = round(recipeNutrition.trans_fat * 10)/10.0
+        recipeNutrition.cholesterol /= recipeNutrition.serving_size
+        recipeNutrition.cholesterol = round(recipeNutrition.cholesterol * 10)/10.0
+        recipeNutrition.sodium /= recipeNutrition.serving_size
+        recipeNutrition.sodium = round(recipeNutrition.sodium * 10)/10.0
+        recipeNutrition.total_carbohydrates /= recipeNutrition.serving_size
+        recipeNutrition.total_carbohydrates = round(recipeNutrition.total_carbohydrates * 10)/10.0
+        recipeNutrition.dietary_fiber /= recipeNutrition.serving_size
+        recipeNutrition.dietary_fiber = round(recipeNutrition.dietary_fiber * 10)/10.0
+        recipeNutrition.sugar /= recipeNutrition.serving_size
+        recipeNutrition.sugar = round(recipeNutrition.sugar * 10)/10.0
+        recipeNutrition.protein /= recipeNutrition.serving_size
+        recipeNutrition.protein = round(recipeNutrition.protein * 10)/10.0
+        recipeNutrition.vitamin_a /= recipeNutrition.serving_size
+        recipeNutrition.vitamin_a = round(recipeNutrition.vitamin_a * 10)/10.0
+        recipeNutrition.calcium /= recipeNutrition.serving_size
+        recipeNutrition.calcium = round(recipeNutrition.calcium * 10)/10.0
         recipeNutrition.serving_size = 1
     }
     
@@ -254,124 +289,124 @@ class AddRecipeViewController: UIViewController, UITableViewDelegate, UITableVie
         case "Teaspoon":
             switch unit{
             case "cup":
-                multiple = 0.0205372 * amount
+                multiple = 0.0205372 * amount/ing.nutrition.serving_size
             case "tbsp":
-                multiple = 0.333 * amount
+                multiple = 0.333 * amount/ing.nutrition.serving_size
             case "g":
-                multiple = 4.92892 * amount
+                multiple = 4.92892 * amount/ing.nutrition.serving_size
             case "mg":
-                multiple = 4928.92 * amount
+                multiple = 4928.92 * amount/ing.nutrition.serving_size
             case "oz":
-                multiple = 0.1738625365 * amount
+                multiple = 0.1738625365 * amount/ing.nutrition.serving_size
             default:
-                multiple = amount
+                multiple = amount/ing.nutrition.serving_size
             }
         case "Tablespoon":
             switch unit{
             case "cup":
-                multiple = 0.0616115 * amount
+                multiple = 0.0616115 * amount/ing.nutrition.serving_size
             case "g":
-                multiple = 14.7868 * amount
+                multiple = 14.7868 * amount/ing.nutrition.serving_size
             case "mg":
-                multiple = 14787 * amount
+                multiple = 14787 * amount/ing.nutrition.serving_size
             case "oz":
-                multiple = 0.5215890206 * amount
+                multiple = 0.5215890206 * amount/ing.nutrition.serving_size
             default:
-                multiple = amount
+                multiple = amount/ing.nutrition.serving_size
             }
         case "Cup":
             switch unit{
             case "tsp":
-                multiple = 48.6922 * amount
+                multiple = 48.6922 * amount/ing.nutrition.serving_size
             case "tbsp":
-                multiple = 16.2307 * amount
+                multiple = 16.2307 * amount/ing.nutrition.serving_size
             case "g":
-                multiple = 240 * amount
+                multiple = 240 * amount/ing.nutrition.serving_size
             case "mg":
-                multiple = 240000 * amount
+                multiple = 240000 * amount/ing.nutrition.serving_size
             case "oz":
-                multiple = 8.46575 * amount
+                multiple = 8.46575 * amount/ing.nutrition.serving_size
             default:
-                multiple = amount
+                multiple = amount/ing.nutrition.serving_size
             }
         case "Milligram":
             switch unit{
             case "cup":
-                multiple = 0.000004 * amount
+                multiple = 0.000004 * amount/ing.nutrition.serving_size
             case "g":
-                multiple = 0.001 * amount
+                multiple = 0.001 * amount/ing.nutrition.serving_size
             case "tsp":
-                multiple = 0.0002028842 * amount
+                multiple = 0.0002028842 * amount/ing.nutrition.serving_size
             case "tbsp":
-                multiple = 0.0000676279 * amount
+                multiple = 0.0000676279 * amount/ing.nutrition.serving_size
             case "oz":
-                multiple = 0.000035274 * amount
+                multiple = 0.000035274 * amount/ing.nutrition.serving_size
             default:
-                multiple = amount
+                multiple = amount/ing.nutrition.serving_size
             }
         case "Gram":
             switch unit{
             case "cup":
-                multiple = 0.004 * amount
+                multiple = 0.004 * amount/ing.nutrition.serving_size
             case "tsp":
-                multiple = 0.202884 * amount
+                multiple = 0.202884 * amount/ing.nutrition.serving_size
             case "tbsp":
-                multiple = 0.067628 * amount
+                multiple = 0.067628 * amount/ing.nutrition.serving_size
             case "mg":
-                multiple = 1000 * amount
+                multiple = 1000 * amount/ing.nutrition.serving_size
             case "oz":
-                multiple = 0.035274 * amount
+                multiple = 0.035274 * amount/ing.nutrition.serving_size
             default:
-                multiple = amount
+                multiple = amount/ing.nutrition.serving_size
             }
         case "Ounce":
             switch unit{
             case "cup":
-                multiple = 0.125 * amount
+                multiple = 0.125 * amount/ing.nutrition.serving_size
             case "g":
-                multiple = 28.349 * amount
+                multiple = 28.349 * amount/ing.nutrition.serving_size
             case "mg":
-                multiple = 28349.55 * amount
+                multiple = 28349.55 * amount/ing.nutrition.serving_size
             case "tsp":
-                multiple = 5.751670372 * amount
+                multiple = 5.751670372 * amount/ing.nutrition.serving_size
             case "tbsp":
-                multiple = 1.917218271 * amount
+                multiple = 1.917218271 * amount/ing.nutrition.serving_size
             default:
-                multiple = amount
+                multiple = amount/ing.nutrition.serving_size
             }
         case "Fluid Ounce":
             switch unit{
             case "cup":
-                multiple = 0.123223 * amount
+                multiple = 0.123223 * amount/ing.nutrition.serving_size
             case "g":
-                multiple = 29.57354942 * amount
+                multiple = 29.57354942 * amount/ing.nutrition.serving_size
             case "mg":
-                multiple = 29573.54942 * amount
+                multiple = 29573.54942 * amount/ing.nutrition.serving_size
             case "oz":
-                multiple = 1.0432 * amount
+                multiple = 1.0432 * amount/ing.nutrition.serving_size
             case "tsp":
-                multiple = 6 * amount
+                multiple = 6 * amount/ing.nutrition.serving_size
             case "tbsp":
-                multiple = 2 * amount
+                multiple = 2 * amount/ing.nutrition.serving_size
             default:
-                multiple = amount
+                multiple = amount/ing.nutrition.serving_size
             }
         default:
-            multiple = amount
+            multiple = amount/ing.nutrition.serving_size
         }
-        var newIng = ing
-        newIng.nutrition.calories += multiple
-        newIng.nutrition.total_fat += multiple
-        newIng.nutrition.saturated_fat += multiple
-        newIng.nutrition.trans_fat += multiple
-        newIng.nutrition.cholesterol += multiple
-        newIng.nutrition.sodium += multiple
-        newIng.nutrition.total_carbohydrates += multiple
-        newIng.nutrition.dietary_fiber += multiple
-        newIng.nutrition.sugar += multiple
-        newIng.nutrition.protein += multiple
-        newIng.nutrition.vitamin_a += multiple
-        newIng.nutrition.calcium += multiple
+        var newIng = Ingredient(newName: "")
+        newIng.nutrition.calories += multiple * ing.nutrition.calories
+        newIng.nutrition.total_fat += multiple * ing.nutrition.total_fat
+        newIng.nutrition.saturated_fat += multiple * ing.nutrition.saturated_fat
+        newIng.nutrition.trans_fat += multiple * ing.nutrition.trans_fat
+        newIng.nutrition.cholesterol += multiple * ing.nutrition.cholesterol
+        newIng.nutrition.sodium += multiple * ing.nutrition.sodium
+        newIng.nutrition.total_carbohydrates += multiple * ing.nutrition.total_carbohydrates
+        newIng.nutrition.dietary_fiber += multiple * ing.nutrition.dietary_fiber
+        newIng.nutrition.sugar += multiple * ing.nutrition.sugar
+        newIng.nutrition.protein += multiple * ing.nutrition.protein
+        newIng.nutrition.vitamin_a += multiple * ing.nutrition.vitamin_a
+        newIng.nutrition.calcium += multiple * ing.nutrition.calcium
         return newIng
     }
     
