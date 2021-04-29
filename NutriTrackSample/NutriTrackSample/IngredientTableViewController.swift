@@ -13,7 +13,7 @@ class IngredientTableViewController: UITableViewController {
     var selectedCategory = 0
     var ingredientList = [Ingredient]()
     var ingredientNames = [String]()
-    var searchController = UISearchController()
+    
 
     override func viewWillAppear(_ animated: Bool) {
         ingredientList = ingredientData.getIngredients(index: selectedCategory)
@@ -23,15 +23,7 @@ class IngredientTableViewController: UITableViewController {
             ingredientNames.append(ingredient.name)
         }
         ingredientNames = ingredientNames.sorted{$0 < $1}
-        let resultsController = IngrSearchViewController()
-        resultsController.allIngredients = ingredientNames
-        resultsController.ingredientData = ingredientData
-        resultsController.ingredientList = ingredientList
-        searchController = UISearchController(searchResultsController: resultsController)
-        searchController.searchBar.placeholder = "Enter an ingredient name"
-        searchController.searchBar.sizeToFit()
-        tableView.tableHeaderView=searchController.searchBar
-        searchController.searchResultsUpdater = resultsController
+        
     }
 
     override func viewDidLoad() {
